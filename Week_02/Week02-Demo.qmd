@@ -1,0 +1,12 @@
+---
+title: "Week_02 Practice"
+author: "Reddy"
+format: pdf
+link-citations: true
+editor: visual
+jupyter: python3
+---
+
+```{r}
+rmarkdown::convert_ipynb('Week02-Demo.ipynb')
+```

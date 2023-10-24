@@ -1,0 +1,133 @@
+---
+title: An R Markdown document converted from "Week04-Demo-Pandas-DataFrame-merging-etc.ipynb"
+output: html_document
+---
+
+# Load packages
+
+```{python}
+import pandas as pd
+import numpy as np
+```
+
+```{python}
+!mkdir UK-Politics-files
+!wget https://www.dropbox.com/sh/susyp0an187iinj/AAB_HDCcE3T8xCh4MqypigsPa?dl=1 -O UK-Politics-files/UK-Politics.zip
+```
+
+```{python}
+!unzip UK-Politics-files/UK-Politics.zip -d UK-Politics-files/
+```
+
+# Open two data sets, check the contents
+
+```{python}
+df_brexit = pd.read_csv("/content/UK-Politics-files/brexit-vote.csv")
+```
+
+```{python}
+df_elec = pd.read_excel("/content/UK-Politics-files/general-election-results-2019.xlsx", sheet_name = "voting-summary")
+```
+
+```{python}
+df_elec.head()
+```
+
+```{python}
+df_brexit
+```
+
+# Data wrangling
+
+
+##  Rename the variables to merge
+
+```{python}
+df_brexit.rename({'PCON11CD': 'ons_id'}, axis = 1, inplace=True)
+```
+
+## Merge
+
+```{python}
+df_merged = df_elec.merge(df_brexit, on = 'ons_id')
+```
+
+## Join
+
+You can use `join` instead, but for joining you need to set index.
+
+```{python}
+df_elec.set_index('ons_id').join(df_brexit.set_index('ons_id'), on = 'ons_id')
+```
+
+# Descriptive Statistics
+
+```{python}
+df_merged.mean()
+```
+
+Calculate the percentage of vote the Conservatives got
+
+```{python}
+df_merged["con_pct"] = df_merged['con'] / df_merged['valid_votes']
+```
+
+Count the number of observations in each county
+
+```{python}
+df_merged.value_counts(['county_name', 'region_name']).sort_index(level = 1)
+```
+
+## Correlations
+
+```{python}
+df_merged[['con_pct', 'Figure to use']].corr()
+```
+
+## Groupby
+
+```{python}
+df_merged.groupby('region_name').sum().reset_index()
+```
+
+# Pivoting 
+
+```{python}
+df_elec_sub = df_elec[:5]
+```
+
+```{python}
+df_elec_sub
+```
+
+```{python}
+df_elec_sub = df_elec[['ons_id', 'constituency_name', 'con', 'lab', 'ld']]
+```
+
+```{python}
+df_elec_sub
+```
+
+```{python}
+melted = df_elec_sub.melt(['ons_id', "constituency_name"],  var_name = "party", 
+                          value_name = 'vote').sort_values('constituency_name')
+melted
+```
+
+```{python}
+unmelted = melted.pivot(['ons_id', 'constituency_name'], 'party').reset_index()
+unmelted
+```
+
+```{python}
+unmelted.columns = ['ons_id', 'constituency_name', 'con', 'lab', 'ld']
+```
+
+```{python}
+unmelted
+```
+
+```{python}
+unmelted.iloc[:, 2:].corr()
+```
+

@@ -1,0 +1,34 @@
+---
+title: week4
+format: pdf
+format-links: true
+link-citations: true
+linkcolor: purple
+bibliography: references.bib
+---
+
+cite [@debruin2020a].
+
+```{python}
+import pandas as pd
+import numpy as np
+```
+
+```{python}
+df_brexit = pd.read_csv('../UK-Politics-files/brexit-vote.csv')
+```
+
+```{python}
+df_elec = pd.read_excel('../UK-Politics-files/general-election-results-2019.xlsx', sheet_name = 'voting-summary')
+```
+
+```{python}
+df_brexit.rename({'PCON11CD': 'ons_id'}, axis = 1, inplace=True)
+df_merged = df_elec.merge(df_brexit, on = 'ons_id')
+```
+
+```{r}
+
+rmarkdown::convert_ipynb('Week04-Demo-Pandas-DataFrame-merging-etc.ipynb')
+rmarkdown::convert_ipynb('Week02-Demo.ipynb')
+```

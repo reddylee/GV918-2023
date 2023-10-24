@@ -1,0 +1,321 @@
+---
+title: "Week02-Demo.ipynb"
+output: html_document
+---
+
+# Week 02 Class
+
+
+## Python scalers
+
+
+**GV918**
+
+```{r}
+library(reticulate)
+
+```
+
+
+- Hello!
+- Today is 12 Oct.
+
+```{python}
+
+1+1
+```
+
+```{python}
+a = 2.0
+```
+
+```{python}
+b = 10
+```
+
+```{python}
+str_a = "this is a string object."
+```
+
+```{python}
+str_b = 'this is also a string object.'
+```
+
+### calculation/manipulation
+
+```{python}
+a + b
+```
+
+```{python}
+a / b
+```
+
+```{python}
+a * b
+```
+
+```{python}
+a + 3
+```
+
+```{python}
+a = 4
+```
+
+```{python}
+a
+```
+
+```{python}
+a = a + 3
+```
+
+```{python}
+a 
+```
+
+```{python}
+#a + str_a
+```
+
+```{python}
+str_a + " " + str_b
+```
+
+## List
+
+```{python}
+list_a = [1, 7, 8]
+```
+
+```{python}
+list_b = [2, 3, 4, "Uni Essex"]
+```
+
+```{python}
+list_c = []
+```
+
+```{python}
+list_b.append(1)
+```
+
+```{python}
+list_b
+```
+
+```{python}
+list_a[0]
+```
+
+```{python}
+list_a[1]
+```
+
+```{python}
+list_a[2]
+```
+
+```{python}
+# list_a[3]
+```
+
+```{python}
+list_a[0:2]
+```
+
+```{python}
+list_a[0:3]
+```
+
+```{python}
+list_a[1:3]
+```
+
+```{python}
+list_a[:2]
+```
+
+```{python}
+list_a[1:]
+```
+
+```{python}
+#list_a[[0, 2]]
+```
+
+```{python}
+list_a[1] = 100
+```
+
+```{python}
+list_a
+```
+
+```{python}
+list_a.pop() # remove the last item
+```
+
+## Dictionary
+
+```{python}
+dic_a = {"one": 3, "two": 5, "three": "Essex"}
+```
+
+```{python}
+dic_a['one']
+```
+
+```{python}
+dic_a['two'] = 120
+```
+
+```{python}
+dic_a
+```
+
+```{python}
+dic_a['five'] = 20
+```
+
+```{python}
+dic_a
+```
+
+## Tuple
+
+```{python}
+tup_a = (1,3,4)
+```
+
+```{python}
+tup_a[1]
+```
+
+```{python}
+tup_a[:2]
+```
+
+```{python}
+# tup_a[1] = 2 # 'tuple' object does not support item assignment
+```
+
+## Loop
+
+### For loop
+
+```{python}
+list_b = list(range(10))
+```
+
+```{python}
+list_b
+```
+
+```{python}
+for k in list_b:
+  print(k)
+  j = k * k
+  print(j)
+  print("-----------")
+  
+```
+
+```{python}
+for key in dic_a:
+  print(key, dic_a[key])
+```
+
+```{python}
+for i in tup_a:
+  print(i)
+```
+
+```{python}
+i = 0
+while i < 10:
+  i += 1
+  print(i)
+```
+
+```{python}
+i 
+```
+
+```{python}
+i = 0
+if i > 0:
+  print("positive")
+  print(i)
+elif i == 0:
+  print('zero')
+  print(i)
+else:
+  print("not positive")
+  print(i)
+```
+
+## Function
+
+```{python}
+def my_func(x):
+  x = x + 2
+  return(x)
+```
+
+```{python}
+my_func(9.2)
+```
+
+```{python}
+def my_addition(x, y):
+  z = x + y
+  return(z)
+print("hello")
+```
+
+```{python}
+my_addition(2, 1.2)
+```
+
+```{python}
+def my_addition2(x, y = 2):
+  z = x + y
+  return(z)
+```
+
+```{python}
+my_addition2(4)
+```
+
+```{python}
+my_addition2(4, 10)
+```
+
+## List comprehension
+
+```{python}
+list_d = list(range(10))
+list_d
+```
+
+```{python}
+#list_d + 2 # can only concatenate list (not "int") to list
+```
+
+```{python}
+[i + 2 for i in list_d]
+```
+
+```{python}
+[i**2 for i in list_d]
+```
+
+```{python}
+[i + 5 for i in list_d if i > 3]
+```
+```{r}
+py$a
+```
+
