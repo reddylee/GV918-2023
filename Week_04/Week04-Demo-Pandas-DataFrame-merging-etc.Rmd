@@ -15,15 +15,21 @@ import numpy as np
 !wget https://www.dropbox.com/sh/susyp0an187iinj/AAB_HDCcE3T8xCh4MqypigsPa?dl=1 -O UK-Politics-files/UK-Politics.zip
 ```
 
-```{python}
-!unzip UK-Politics-files/UK-Politics.zip -d UK-Politics-files/
+```{bash}
+unzip UK-Politics-files/UK-Politics.zip -d UK-Politics-files/
 ```
 
 # Open two data sets, check the contents
 
 ```{python}
-df_brexit = pd.read_csv("/content/UK-Politics-files/brexit-vote.csv")
+df_brexit = pd.read_csv("UK-Politics-files/brexit-vote.csv")
 ```
+
+```{r}
+brexit <- read.csv("UK-Politics-files/brexit-vote.csv")
+getwd()
+```
+
 
 ```{python}
 df_elec = pd.read_excel("/content/UK-Politics-files/general-election-results-2019.xlsx", sheet_name = "voting-summary")

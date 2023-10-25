@@ -1,0 +1,639 @@
+index,MemberId,Name,Party,MemberFrom,vote1,vote2,vote3,ons_code,signature_count_241584
+0,8,Theresa May,Conservative,Maidenhead,1.0,1.0,1.0,E14000803,13559
+1,15,David Lidington,Conservative,Aylesbury,1.0,1.0,1.0,E14000538,10129
+2,18,Cheryl Gillan,Conservative,Chesham and Amersham,1.0,1.0,1.0,E14000631,13543
+3,55,Desmond Swayne,Conservative,New Forest West,1.0,1.0,1.0,E14000828,7920
+4,69,Oliver Heald,Conservative,North East Hertfordshire,1.0,1.0,1.0,E14000845,10974
+5,76,Damian Green,Conservative,Ashford,1.0,1.0,1.0,E14000536,9102
+6,87,Roger Gale,Conservative,North Thanet,1.0,1.0,1.0,E14000852,6094
+7,103,Paul Beresford,Conservative,Mole Valley,1.0,1.0,1.0,E14000824,13380
+8,105,Philip Hammond,Conservative,Runnymede and Weybridge,1.0,1.0,1.0,E14000907,11788
+9,111,Nick Gibb,Conservative,Bognor Regis and Littlehampton,1.0,1.0,1.0,E14000576,6224
+10,116,Nicholas Soames,Conservative,Mid Sussex,1.0,1.0,1.0,E14000817,13870
+11,117,Peter Bottomley,Conservative,Worthing West,1.0,1.0,1.0,E14001055,9256
+12,126,Keith Simpson,Conservative,Broadland,1.0,1.0,1.0,E14000603,7830
+13,223,Liam Fox,Conservative,North Somerset,1.0,1.0,1.0,E14000850,13752
+14,234,Gary Streeter,Conservative,South West Devon,1.0,1.0,1.0,E14000950,7407
+15,247,Oliver Letwin,Conservative,West Dorset,1.0,1.0,1.0,E14001031,11763
+16,249,Geoffrey Clifton-Brown,Conservative,The Cotswolds,1.0,1.0,1.0,E14000991,12321
+17,312,Caroline Spelman,Conservative,Meriden,1.0,1.0,1.0,E14000812,7219
+18,333,Patrick McLoughlin,Conservative,Derbyshire Dales,1.0,1.0,1.0,E14000664,9201
+19,335,David Tredinnick,Conservative,Bosworth,1.0,1.0,1.0,E14000583,6449
+20,343,Alan Duncan,Conservative,Rutland and Melton,1.0,1.0,1.0,E14000909,8829
+21,345,Edward Leigh,Conservative,Gainsborough,1.0,1.0,1.0,E14000707,5402
+22,366,Kenneth Clarke,Conservative,Rushcliffe,1.0,1.0,1.0,E14000908,13905
+23,392,Kevin Barron,Labour,Rother Valley,1.0,1.0,1.0,E14000903,3936
+24,478,Frank Field,Independent,Birkenhead,1.0,1.0,1.0,E14000559,6032
+25,1201,Alistair Burt,Conservative,North East Bedfordshire,1.0,1.0,1.0,E14000841,10422
+26,1387,John Mann,Labour,Bassetlaw,1.0,1.0,1.0,E14000546,4123
+27,1405,Mark Field,Conservative,Cities of London and Westminster,1.0,1.0,1.0,E14000639,25155
+28,1413,Chris Grayling,Conservative,Epsom and Ewell,1.0,1.0,1.0,E14000694,13346
+29,1424,Mark Prisk,Conservative,Hertford and Stortford,1.0,1.0,1.0,E14000744,13263
+30,1425,Jonathan Djanogly,Conservative,Huntingdon,1.0,1.0,1.0,E14000757,10599
+31,1437,Lady Hermon,Independent,North Down,1.0,1.0,1.0,N06000013,7385
+32,1441,Henry Bellingham,Conservative,North West Norfolk,1.0,1.0,1.0,E14000859,4985
+33,1453,Andrew Selous,Conservative,South West Bedfordshire,1.0,1.0,1.0,E14000949,8062
+34,1466,Andrew Murrison,Conservative,South West Wiltshire,1.0,1.0,1.0,E14000954,8459
+35,1479,Nick Herbert,Conservative,Arundel and South Downs,1.0,1.0,1.0,E14000534,12824
+36,1480,Maria Miller,Conservative,Basingstoke,1.0,1.0,1.0,E14000545,9702
+37,1482,Graham Stuart,Conservative,Beverley and Holderness,1.0,1.0,1.0,E14000556,6144
+38,1487,Tobias Ellwood,Conservative,Bournemouth East,1.0,1.0,1.0,E14000584,10348
+39,1493,Charles Walker,Conservative,Broxbourne,1.0,1.0,1.0,E14000606,5595
+40,1508,Geoffrey Cox,Conservative,Torridge and West Devon,1.0,1.0,1.0,E14001000,8404
+41,1511,Ian Austin,Labour,Dudley North,1.0,1.0,1.0,E14000671,2165
+42,1512,David Mundell,Conservative,"Dumfriesshire, Clydesdale and Tweeddale",1.0,1.0,1.0,S14000014,7907
+43,1523,Anne Milton,Conservative,Guildford,1.0,1.0,1.0,E14000719,16596
+44,1529,David Gauke,Conservative,South West Hertfordshire,1.0,1.0,1.0,E14000951,14572
+45,1530,James Brokenshire,Conservative,Old Bexley and Sidcup,1.0,1.0,1.0,E14000869,6157
+46,1539,Ben Wallace,Conservative,Wyre and Preston North,1.0,1.0,1.0,E14001057,6214
+47,1542,Philip Dunne,Conservative,Ludlow,1.0,1.0,1.0,E14000799,6942
+48,1544,Mark Lancaster,Conservative,Milton Keynes North,1.0,1.0,1.0,E14000821,11880
+49,1545,David T. C. Davies,Conservative,Monmouth,1.0,1.0,1.0,W07000054,8944
+50,1547,Richard Benyon,Conservative,Newbury,1.0,1.0,1.0,E14000830,12222
+51,1554,Stephen Crabb,Conservative,Preseli Pembrokeshire,1.0,1.0,1.0,W07000065,5579
+52,1560,Jeremy Wright,Conservative,Kenilworth and Southam,1.0,1.0,1.0,E14000767,10651
+53,1561,Nick Hurd,Conservative,"Ruislip, Northwood and Pinner",1.0,1.0,1.0,E14000906,11201
+54,1562,Robert Goodwill,Conservative,Scarborough and Whitby,1.0,1.0,1.0,E14000913,5616
+55,1571,Michael Gove,Conservative,Surrey Heath,1.0,1.0,1.0,E14000983,10735
+56,1572,Jeremy Hunt,Conservative,South West Surrey,1.0,1.0,1.0,E14000953,16925
+57,1578,Greg Clark,Conservative,Tunbridge Wells,1.0,1.0,1.0,E14001004,14186
+58,1580,Edward Vaizey,Conservative,Wantage,1.0,1.0,1.0,E14001015,15548
+59,1584,John Penrose,Conservative,Weston-super-Mare,1.0,1.0,1.0,E14001038,8378
+60,1585,Stephen Hammond,Conservative,Wimbledon,1.0,1.0,1.0,E14001040,21325
+61,1601,Robert Neill,Conservative,Bromley and Chislehurst,1.0,1.0,1.0,E14000604,11097
+62,1606,John Howell,Conservative,Henley,1.0,1.0,1.0,E14000742,15184
+63,1609,Chloe Smith,Conservative,Norwich North,1.0,1.0,1.0,E14000863,7912
+64,3926,Paul Maynard,Conservative,Blackpool North and Cleveleys,1.0,1.0,1.0,E14000572,3231
+65,3932,Dan Poulter,Conservative,Central Suffolk and North Ipswich,1.0,1.0,1.0,E14000624,8491
+66,3934,George Eustice,Conservative,Camborne and Redruth,1.0,1.0,1.0,E14000616,7137
+67,3935,Mel Stride,Conservative,Central Devon,1.0,1.0,1.0,E14000623,11841
+68,3936,Andrew Griffiths,Conservative,Burton,1.0,1.0,1.0,E14000610,4966
+69,3939,Andrew Percy,Conservative,Brigg and Goole,1.0,1.0,1.0,E14000596,3440
+70,3940,Craig Whittaker,Conservative,Calder Valley,1.0,1.0,,E14000614,10335
+71,3942,John Stevenson,Conservative,Carlisle,1.0,1.0,1.0,E14000620,4351
+72,3944,Simon Hart,Conservative,Carmarthen West and South Pembrokeshire,1.0,1.0,1.0,W07000066,5138
+73,3945,Sajid Javid,Conservative,Bromsgrove,1.0,1.0,1.0,E14000605,7717
+74,3948,Rebecca Harris,Conservative,Castle Point,1.0,1.0,1.0,E14000622,3231
+75,3968,Stephen Lloyd,Independent,Eastbourne,1.0,1.0,1.0,E14000684,9280
+76,3969,Damian Hinds,Conservative,East Hampshire,1.0,1.0,1.0,E14000680,11888
+77,3974,Claire Perry,Conservative,Devizes,1.0,1.0,1.0,E14000665,8530
+78,3977,Chris Heaton-Harris,Conservative,Daventry,1.0,1.0,1.0,E14000660,8247
+79,3983,Amber Rudd,Conservative,Hastings and Rye,1.0,1.0,1.0,E14000735,10491
+80,3989,Jack Lopresti,Conservative,Filton and Bradley Stoke,1.0,1.0,1.0,E14000702,10747
+81,3990,Richard Graham,Conservative,Gloucester,1.0,1.0,1.0,E14000712,7161
+82,3991,Jesse Norman,Conservative,Hereford and South Herefordshire,1.0,1.0,1.0,E14000743,7388
+83,3992,James Morris,Conservative,Halesowen and Rowley Regis,1.0,1.0,1.0,E14000722,3821
+84,3995,Nick Boles,Conservative,Grantham and Stamford,1.0,1.0,1.0,E14000714,7298
+85,3996,Andrew Jones,Conservative,Harrogate and Knaresborough,1.0,1.0,1.0,E14000730,11529
+86,3997,Alec Shelbrooke,Conservative,Elmet and Rothwell,1.0,1.0,1.0,E14000689,7943
+87,3998,Mark Menzies,Conservative,Fylde,1.0,1.0,1.0,E14000706,5788
+88,4004,Mike Freer,Conservative,Finchley and Golders Green,1.0,1.0,1.0,E14000703,20236
+89,4008,Caroline Dinenage,Conservative,Gosport,1.0,1.0,1.0,E14000713,5259
+90,4009,Brandon Lewis,Conservative,Great Yarmouth,1.0,1.0,1.0,E14000717,3348
+91,4014,Alok Sharma,Conservative,Reading West,1.0,1.0,1.0,E14000890,9959
+92,4016,George Hollingbery,Conservative,Meon Valley,1.0,1.0,1.0,E14000811,8589
+93,4017,Penny Mordaunt,Conservative,Portsmouth North,1.0,1.0,1.0,E14000883,5314
+94,4018,Helen Grant,Conservative,Maidstone and The Weald,1.0,1.0,1.0,E14000804,8929
+95,4020,George Freeman,Conservative,Mid Norfolk,1.0,1.0,1.0,E14000816,7284
+96,4021,Chris Skidmore,Conservative,Kingswood,1.0,1.0,1.0,E14000774,7146
+97,4024,Marcus Jones,Conservative,Nuneaton,1.0,1.0,1.0,E14000868,4078
+98,4027,Nicky Morgan,Conservative,Loughborough,1.0,1.0,1.0,E14000797,8846
+99,4032,Stuart Andrew,Conservative,Pudsey,1.0,1.0,1.0,E14000886,10134
+100,4033,David Rutley,Conservative,Macclesfield,1.0,1.0,1.0,E14000802,11247
+101,4041,Glyn Davies,Conservative,Montgomeryshire,1.0,1.0,1.0,W07000063,4817
+102,4044,Andrew Stephenson,Conservative,Pendle,1.0,,,E14000875,3298
+103,4048,Caroline Nokes,Conservative,Romsey and Southampton North,1.0,1.0,1.0,E14000901,10399
+104,4051,John Glen,Conservative,Salisbury,1.0,1.0,1.0,E14000912,10106
+105,4052,Mark Pawsey,Conservative,Rugby,1.0,1.0,1.0,E14000905,7565
+106,4053,Heather Wheeler,Conservative,South Derbyshire,1.0,1.0,1.0,E14000935,6065
+107,4055,Mark Spencer,Conservative,Sherwood,1.0,1.0,1.0,E14000924,5347
+108,4057,Nigel Adams,Conservative,Selby and Ainsty,1.0,1.0,1.0,E14000917,7303
+109,4060,Jake Berry,Conservative,Rossendale and Darwen,1.0,1.0,1.0,E14000902,5496
+110,4065,Jackie Doyle-Price,Conservative,Thurrock,1.0,1.0,1.0,E14000995,4936
+111,4067,Steve Brine,Conservative,Winchester,1.0,1.0,1.0,E14001041,15966
+112,4068,Richard Harrington,Conservative,Watford,1.0,1.0,1.0,E14001021,11105
+113,4069,Peter Aldous,Conservative,Waveney,1.0,1.0,1.0,E14001022,5200
+114,4070,Matt Hancock,Conservative,West Suffolk,1.0,1.0,1.0,E14001034,7055
+115,4071,Sarah Newton,Conservative,Truro and Falmouth,1.0,1.0,1.0,E14001003,13034
+116,4072,Neil Parish,Conservative,Tiverton and Honiton,1.0,1.0,1.0,E14000996,8620
+117,4074,Mark Garnier,Conservative,Wyre Forest,1.0,1.0,1.0,E14001058,5221
+118,4075,Christopher Pincher,Conservative,Tamworth,1.0,1.0,1.0,E14000986,4191
+119,4086,Alun Cairns,Conservative,Vale of Glamorgan,1.0,1.0,1.0,W07000078,8133
+120,4091,Robin Walker,Conservative,Worcester,1.0,1.0,1.0,E14001052,8668
+121,4095,Stephen Barclay,Conservative,North East Cambridgeshire,1.0,1.0,1.0,E14000842,5153
+122,4097,Elizabeth Truss,Conservative,South West Norfolk,1.0,1.0,1.0,E14000952,5239
+123,4098,Thérèse Coffey,Conservative,Suffolk Coastal,1.0,1.0,1.0,E14000981,10017
+124,4105,Justin Tomlinson,Conservative,North Swindon,1.0,1.0,1.0,E14000851,7606
+125,4106,Robert Buckland,Conservative,South Swindon,1.0,1.0,1.0,E14000947,8867
+126,4107,Harriett Baldwin,Conservative,West Worcestershire,1.0,1.0,1.0,E14001035,9820
+127,4108,Gavin Williamson,Conservative,South Staffordshire,1.0,1.0,1.0,E14000945,3934
+128,4109,Jeremy Lefroy,Conservative,Stafford,1.0,1.0,1.0,E14000965,6361
+129,4110,Karen Bradley,Conservative,Staffordshire Moorlands,1.0,1.0,1.0,E14000966,4337
+130,4113,Nadhim Zahawi,Conservative,Stratford-on-Avon,1.0,1.0,1.0,E14000977,10046
+131,4115,Margot James,Conservative,Stourbridge,1.0,1.0,1.0,E14000976,4484
+132,4116,Michael Ellis,Conservative,Northampton North,1.0,1.0,1.0,E14000861,5407
+133,4117,Andrea Leadsom,Conservative,South Northamptonshire,1.0,1.0,1.0,E14000942,10815
+134,4118,Julian Smith,Conservative,Skipton and Ripon,1.0,1.0,1.0,E14000928,9533
+135,4134,Kwasi Kwarteng,Conservative,Spelthorne,1.0,1.0,1.0,E14000959,8247
+136,4135,David Morris,Conservative,Morecambe and Lunesdale,1.0,1.0,1.0,E14000825,5666
+137,4137,Rory Stewart,Conservative,Penrith and The Border,1.0,1.0,1.0,E14000877,6540
+138,4142,Guy Opperman,Conservative,Hexham,1.0,1.0,1.0,E14000746,8666
+139,4320,Robert Jenrick,Conservative,Newark,1.0,1.0,1.0,E14000829,8208
+140,4361,Matt Warman,Conservative,Boston and Skegness,1.0,1.0,1.0,E14000582,2746
+141,4362,Edward Argar,Conservative,Charnwood,1.0,1.0,1.0,E14000625,6532
+142,4366,James Cleverly,Conservative,Braintree,1.0,1.0,1.0,E14000590,6197
+143,4376,Chris Davies,Conservative,Brecon and Radnorshire,1.0,1.0,1.0,W07000068,6221
+144,4380,Jo Churchill,Conservative,Bury St Edmunds,1.0,1.0,1.0,E14000613,9795
+145,4384,Mike Wood,Conservative,Dudley South,1.0,1.0,1.0,E14000672,2543
+146,4399,Victoria Atkins,Conservative,Louth and Horncastle,1.0,1.0,1.0,E14000798,4293
+147,4401,Victoria Prentis,Conservative,Banbury,1.0,1.0,1.0,E14000539,12351
+148,4406,Mary Robinson,Conservative,Cheadle,1.0,1.0,1.0,E14000627,11130
+149,4407,Nigel Huddleston,Conservative,Mid Worcestershire,1.0,1.0,1.0,E14000818,7108
+150,4410,Julian Knight,Conservative,Solihull,1.0,1.0,1.0,E14000931,8102
+151,4414,Paul Scully,Conservative,Sutton and Cheam,1.0,1.0,1.0,E14000984,10453
+152,4439,Alberto Costa,Conservative,South Leicestershire,1.0,1.0,1.0,E14000940,6883
+153,4441,Oliver Dowden,Conservative,Hertsmere,1.0,1.0,1.0,E14000745,9848
+154,4442,Huw Merriman,Conservative,Bexhill and Battle,1.0,1.0,1.0,E14000557,9105
+155,4447,Maggie Throup,Conservative,Erewash,1.0,1.0,1.0,E14000695,5397
+156,4450,Luke Hall,Conservative,Thornbury and Yate,1.0,1.0,1.0,E14000994,8248
+157,4451,Kevin Foster,Conservative,Torbay,1.0,1.0,1.0,E14000999,6227
+158,4454,Amanda Milling,Conservative,Cannock Chase,1.0,1.0,1.0,E14000618,3197
+159,4455,Seema Kennedy,Conservative,South Ribble,1.0,1.0,1.0,E14000943,6686
+160,4460,Nusrat Ghani,Conservative,Wealden,1.0,1.0,1.0,E14001023,11891
+161,4462,Tom Tugendhat,Conservative,Tonbridge and Malling,1.0,1.0,1.0,E14000997,11217
+162,4474,Kevin Hollinrake,Conservative,Thirsk and Malton,1.0,1.0,1.0,E14000993,7674
+163,4481,Alex Chalk,Conservative,Cheltenham,1.0,1.0,1.0,E14000630,14425
+164,4483,Rishi Sunak,Conservative,Richmond (Yorks),1.0,1.0,1.0,E14000895,7537
+165,4484,Alan Mak,Conservative,Havant,1.0,1.0,1.0,E14000736,5847
+166,4487,Kelly Tolhurst,Conservative,Rochester and Strood,1.0,1.0,1.0,E14000898,6657
+167,4494,Simon Hoare,Conservative,North Dorset,1.0,1.0,1.0,E14000839,8683
+168,4495,Kit Malthouse,Conservative,North West Hampshire,1.0,1.0,1.0,E14000857,9555
+169,4503,Chris Philp,Conservative,Croydon South,1.0,1.0,1.0,E14000656,12446
+170,4506,Antoinette Sandbach,Conservative,Eddisbury,1.0,1.0,1.0,E14000686,7554
+171,4507,Jeremy Quin,Conservative,Horsham,1.0,1.0,1.0,E14000753,12770
+172,4513,Mims Davies,Conservative,Eastleigh,1.0,1.0,1.0,E14000685,9078
+173,4517,Lucy Frazer,Conservative,South East Cambridgeshire,1.0,1.0,1.0,E14000937,17037
+174,4519,James Cartlidge,Conservative,South Suffolk,1.0,1.0,1.0,E14000946,8141
+175,4522,Rebecca Pow,Conservative,Taunton Deane,1.0,1.0,1.0,E14000988,10801
+176,4524,Peter Heaton-Jones,Conservative,North Devon,1.0,1.0,1.0,E14000838,7383
+177,4526,David Warburton,Conservative,Somerton and Frome,1.0,1.0,1.0,E14000932,12955
+178,4527,Helen Whately,Conservative,Faversham and Mid Kent,1.0,1.0,1.0,E14000700,8049
+179,4528,James Heappey,Conservative,Wells,1.0,1.0,1.0,E14001026,11072
+180,4530,Michelle Donelan,Conservative,Chippenham,1.0,1.0,1.0,E14000635,11132
+181,4592,Caroline Johnson,Conservative,Sleaford and North Hykeham,1.0,1.0,1.0,E14000929,7097
+182,4593,Trudy Harrison,Conservative,Copeland,1.0,1.0,1.0,E14000647,4391
+183,4597,Kemi Badenoch,Conservative,Saffron Walden,1.0,1.0,1.0,E14000910,11376
+184,4600,Leo Docherty,Conservative,Aldershot,1.0,1.0,1.0,E14000530,7570
+185,4601,Andrew Bowie,Conservative,West Aberdeenshire and Kincardine,1.0,1.0,1.0,S14000058,10862
+186,4604,Stephen Kerr,Conservative,Stirling,1.0,1.0,1.0,S14000057,12678
+187,4605,Bill Grant,Conservative,"Ayr, Carrick and Cumnock",1.0,1.0,1.0,S14000006,5961
+188,4606,David Duguid,Conservative,Banff and Buchan,1.0,1.0,1.0,S14000007,4043
+189,4613,Alex Burghart,Conservative,Brentwood and Ongar,1.0,1.0,1.0,E14000594,7243
+190,4619,Alister Jack,Conservative,Dumfries and Galloway,1.0,1.0,1.0,S14000013,6455
+191,4622,Luke Graham,Conservative,Ochil and South Perthshire,1.0,1.0,1.0,S14000050,10127
+192,4625,Paul Masterton,Conservative,East Renfrewshire,1.0,1.0,1.0,S14000021,12762
+193,4639,Bim Afolami,Conservative,Hitchin and Harpenden,1.0,1.0,1.0,E14000749,16696
+194,4643,Jack Brereton,Conservative,Stoke-on-Trent South,1.0,1.0,1.0,E14000974,2597
+195,4650,Colin Clark,Conservative,Gordon,1.0,1.0,1.0,S14000037,9406
+196,4668,Rachel Maclean,Conservative,Redditch,1.0,1.0,1.0,E14000892,5016
+197,4674,Vicky Ford,Conservative,Chelmsford,1.0,1.0,1.0,E14000628,9894
+198,4675,Kirstene Hair,Conservative,Angus,1.0,1.0,1.0,S14000004,5318
+199,4679,Neil O'Brien,Conservative,Harborough,1.0,1.0,1.0,E14000728,8583
+200,4680,Gillian Keegan,Conservative,Chichester,1.0,1.0,1.0,E14000633,12443
+201,4681,Bob Seely,Conservative,Isle of Wight,1.0,1.0,1.0,E14000762,10277
+202,2,Kelvin Hopkins,Independent,Luton North,0.0,0.0,,E14000800,4116
+203,14,John Redwood,Conservative,Wokingham,0.0,0.0,0.0,E14001048,14213
+204,16,Dominic Grieve,Conservative,Beaconsfield,0.0,0.0,0.0,E14000550,11808
+205,39,John Whittingdale,Conservative,Maldon,0.0,0.0,1.0,E14000806,5593
+206,40,Bernard Jenkin,Conservative,Harwich and North Essex,0.0,0.0,0.0,E14000734,7672
+207,44,David Amess,Conservative,Southend West,0.0,1.0,1.0,E14000957,7196
+208,54,Julian Lewis,Conservative,New Forest East,0.0,0.0,0.0,E14000827,7325
+209,62,Alan Whitehead,Labour,"Southampton, Test",0.0,0.0,0.0,E14000956,10207
+210,88,Michael Fallon,Conservative,Sevenoaks,0.0,0.0,1.0,E14000918,10438
+211,104,Crispin Blunt,Conservative,Reigate,0.0,0.0,1.0,E14000893,12438
+212,114,Tim Loughton,Conservative,East Worthing and Shoreham,0.0,1.0,1.0,E14000682,10871
+213,140,Margaret Hodge,Labour,Barking,0.0,0.0,0.0,E14000540,5671
+214,146,Barry Gardiner,Labour,Brent North,0.0,0.0,0.0,E14000592,8579
+215,150,Harriet Harman,Labour,Camberwell and Peckham,0.0,0.0,0.0,E14000615,22542
+216,151,Tom Brake,Liberal Democrat,Carshalton and Wallington,0.0,0.0,0.0,E14000621,8782
+217,152,Iain Duncan Smith,Conservative,Chingford and Woodford Green,0.0,0.0,1.0,E14000634,9590
+218,155,Geraint Davies,Labour,Swansea West,0.0,0.0,0.0,W07000047,7294
+219,161,Stephen Pound,Labour,Ealing North,0.0,0.0,0.0,E14000675,10479
+220,163,Stephen Timms,Labour,East Ham,0.0,0.0,0.0,E14000679,7771
+221,165,Clive Efford,Labour,Eltham,0.0,0.0,0.0,E14000690,10141
+222,166,Joan Ryan,Labour,Enfield North,0.0,0.0,0.0,E14000691,7561
+223,167,Stephen Twigg,Labour,"Liverpool, West Derby",0.0,0.0,0.0,E14000796,5501
+224,172,Diane Abbott,Labour,Hackney North and Stoke Newington,0.0,0.0,0.0,E14000720,28017
+225,177,Gareth Thomas,Labour,Harrow West,0.0,0.0,0.0,E14000732,9788
+226,178,John McDonnell,Labour,Hayes and Harlington,0.0,0.0,0.0,E14000737,5412
+227,181,John Cryer,Labour,Leyton and Wanstead,0.0,0.0,0.0,E14000790,15277
+228,184,Mike Gapes,Labour,Ilford South,0.0,0.0,0.0,E14000760,6675
+229,185,Jeremy Corbyn,Labour,Islington North,0.0,0.0,0.0,E14000763,27157
+230,188,Edward Davey,Liberal Democrat,Kingston and Surbiton,0.0,0.0,0.0,E14000770,18586
+231,193,Siobhain McDonagh,Labour,Mitcham and Morden,0.0,0.0,0.0,E14000823,10332
+232,197,Jim Fitzpatrick,Labour,Poplar and Limehouse,0.0,0.0,1.0,E14000882,21524
+233,199,Karen Buck,Labour,Westminster North,0.0,0.0,0.0,E14001036,18743
+234,206,David Lammy,Labour,Tottenham,0.0,0.0,0.0,E14001002,16978
+235,207,Vince Cable,Liberal Democrat,Twickenham,0.0,0.0,0.0,E14001005,24927
+236,210,Kate Hoey,Labour,Vauxhall,0.0,0.0,0.0,E14001008,25344
+237,230,Ben Bradshaw,Labour,Exeter,0.0,0.0,0.0,E14000698,14584
+238,242,Christopher Chope,Conservative,Christchurch,0.0,0.0,0.0,E14000638,6611
+239,245,Robert Syms,Conservative,Poole,0.0,1.0,1.0,E14000881,8350
+240,252,David Drew,Labour,Stroud,0.0,0.0,0.0,E14000980,14303
+241,253,Laurence Robertson,Conservative,Tewkesbury,0.0,0.0,0.0,E14000990,9434
+242,261,James Gray,Conservative,North Wiltshire,0.0,0.0,1.0,E14000860,10020
+243,274,Owen Paterson,Conservative,North Shropshire,0.0,0.0,0.0,E14000849,6586
+244,280,Michael Fabricant,Conservative,Lichfield,0.0,0.0,1.0,E14000791,6792
+245,288,William Cash,Conservative,Stone,0.0,0.0,0.0,E14000975,5362
+246,298,Steve McCabe,Labour,"Birmingham, Selly Oak",0.0,0.0,0.0,E14000567,10256
+247,301,Richard Burden,Labour,"Birmingham, Northfield",0.0,0.0,0.0,E14000565,5283
+248,304,Roger Godsiff,Labour,"Birmingham, Hall Green",0.0,0.0,0.0,E14000562,9318
+249,307,Geoffrey Robinson,Labour,Coventry North West,0.0,0.0,0.0,E14000650,6617
+250,308,Jim Cunningham,Labour,Coventry South,0.0,0.0,0.0,E14000651,8221
+251,318,John Spellar,Labour,Warley,0.0,0.0,0.0,E14001016,4008
+252,320,Adrian Bailey,Labour,West Bromwich West,0.0,0.0,0.0,E14001030,2163
+253,325,Dennis Skinner,Labour,Bolsover,0.0,0.0,,E14000577,3522
+254,328,Margaret Beckett,Labour,Derby South,0.0,0.0,0.0,E14000663,4785
+255,338,Keith Vaz,Labour,Leicester East,0.0,0.0,0.0,E14000782,3837
+256,350,John Hayes,Conservative,South Holland and The Deepings,0.0,1.0,1.0,E14000939,4053
+257,360,Vernon Coaker,Labour,Gedling,0.0,0.0,0.0,E14000710,7636
+258,373,David Davis,Conservative,Haltemprice and Howden,0.0,1.0,1.0,E14000724,6118
+259,382,John Grogan,Labour,Keighley,0.0,0.0,0.0,E14000766,7459
+260,389,Caroline Flint,Labour,Don Valley,0.0,1.0,1.0,E14000667,3422
+261,394,Clive Betts,Labour,Sheffield South East,0.0,0.0,0.0,E14000920,3467
+262,400,John Healey,Labour,Wentworth and Dearne,0.0,0.0,0.0,E14001028,2857
+263,410,Jon Trickett,Labour,Hemsworth,0.0,0.0,0.0,E14000740,3699
+264,411,Barry Sheerman,Labour,Huddersfield,0.0,0.0,0.0,E14000756,5297
+265,413,Hilary Benn,Labour,Leeds Central,0.0,0.0,0.0,E14000777,10090
+266,415,Fabian Hamilton,Labour,Leeds North East,0.0,0.0,0.0,E14000779,13437
+267,420,Yvette Cooper,Labour,"Normanton, Pontefract and Castleford",0.0,0.0,0.0,E14000836,3615
+268,422,Chris Leslie,Labour,Nottingham East,0.0,0.0,0.0,E14000865,9607
+269,429,Derek Twigg,Labour,Halton,0.0,0.0,0.0,E14000725,5089
+270,432,Helen Jones,Labour,Warrington North,0.0,0.0,0.0,E14001017,5745
+271,435,Graham Brady,Conservative,Altrincham and Sale West,0.0,1.0,1.0,E14000532,13353
+272,437,David Crausby,Labour,Bolton North East,0.0,0.0,0.0,E14000578,4269
+273,441,Ivan Lewis,Independent,Bury South,0.0,0.0,0.0,E14000612,7398
+274,449,Graham Stringer,Labour,Blackley and Broughton,0.0,0.0,0.0,E14000571,5603
+275,450,Tony Lloyd,Labour,Rochdale,0.0,0.0,0.0,E14000897,3966
+276,458,Ann Coffey,Labour,Stockport,0.0,0.0,0.0,E14000969,9298
+277,465,Gordon Marsden,Labour,Blackpool South,0.0,0.0,0.0,E14000573,2674
+278,473,Mark Hendrick,Labour,Preston,0.0,0.0,0.0,E14000885,4346
+279,474,Nigel Evans,Conservative,Ribble Valley,0.0,1.0,1.0,E14000894,6748
+280,481,George Howarth,Labour,Knowsley,0.0,0.0,0.0,E14000775,5442
+281,483,Maria Eagle,Labour,Garston and Halewood,0.0,0.0,0.0,E14000708,8341
+282,484,Louise Ellman,Labour,"Liverpool, Riverside",0.0,0.0,0.0,E14000793,15142
+283,491,Angela Eagle,Labour,Wallasey,0.0,0.0,0.0,E14001010,6724
+284,514,Ronnie Campbell,Labour,Blyth Valley,0.0,0.0,,E14000575,3975
+285,520,Stephen Hepburn,Labour,Jarrow,0.0,0.0,0.0,E14000765,4110
+286,523,Nicholas Brown,Labour,Newcastle upon Tyne East,0.0,0.0,0.0,E14000832,11447
+287,529,Alan Campbell,Labour,Tynemouth,0.0,0.0,0.0,E14001006,10430
+288,533,David Hanson,Labour,Delyn,0.0,0.0,0.0,W07000042,4766
+289,534,Chris Ruane,Labour,Vale of Clwyd,0.0,0.0,0.0,W07000060,3991
+290,553,Ann Clwyd,Labour,Cynon Valley,0.0,0.0,0.0,W07000070,2740
+291,650,Jeffrey M. Donaldson,Democratic Unionist Party,Lagan Valley,0.0,0.0,0.0,N06000009,7403
+292,1171,Liam Byrne,Labour,"Birmingham, Hodge Hill",0.0,0.0,0.0,E14000563,2626
+293,1198,David Evennett,Conservative,Bexleyheath and Crayford,0.0,1.0,1.0,E14000558,5287
+294,1200,Greg Knight,Conservative,East Yorkshire,0.0,1.0,1.0,E14000683,5347
+295,1211,Andrew Mitchell,Conservative,Sutton Coldfield,0.0,1.0,1.0,E14000985,7886
+296,1383,Mark Tami,Labour,Alyn and Deeside,0.0,0.0,0.0,W07000043,5454
+297,1388,Nigel Dodds,Democratic Unionist Party,Belfast North,0.0,0.0,0.0,N06000002,6924
+298,1390,John Baron,Conservative,Basildon and Billericay,0.0,0.0,0.0,E14000544,5162
+299,1392,Khalid Mahmood,Labour,"Birmingham, Perry Barr",0.0,0.0,0.0,E14000566,3392
+300,1396,Ian Liddell-Grainger,Conservative,Bridgwater and West Somerset,0.0,0.0,1.0,E14000595,6847
+301,1397,Hywel Williams,Plaid Cymru,Arfon,0.0,0.0,0.0,W07000057,7164
+302,1398,Wayne David,Labour,Caerphilly,0.0,0.0,0.0,W07000076,4896
+303,1400,Kevin Brennan,Labour,Cardiff West,0.0,0.0,0.0,W07000079,11695
+304,1406,Jon Cruddas,Labour,Dagenham and Rainham,0.0,0.0,0.0,E14000657,3850
+305,1408,Hugo Swire,Conservative,East Devon,0.0,1.0,1.0,E14000678,11313
+306,1409,Gregory Campbell,Democratic Unionist Party,East Londonderry,0.0,0.0,0.0,N06000006,5196
+307,1423,Boris Johnson,Conservative,Uxbridge and South Ruislip,0.0,0.0,1.0,E14001007,8237
+308,1428,Bill Wiggin,Conservative,North Herefordshire,0.0,1.0,1.0,E14000847,7875
+309,1436,Paul Farrelly,Labour,Newcastle-under-Lyme,0.0,0.0,0.0,E14000834,5021
+310,1438,Kevan Jones,Labour,North Durham,0.0,0.0,0.0,E14000840,4105
+311,1439,Norman Lamb,Liberal Democrat,North Norfolk,0.0,0.0,0.0,E14000848,6156
+312,1440,Pete Wishart,Scottish National Party,Perth and North Perthshire,0.0,0.0,0.0,S14000054,9877
+313,1442,Alistair Carmichael,Liberal Democrat,Orkney and Shetland,0.0,0.0,0.0,S14000051,4622
+314,1444,Mark Francois,Conservative,Rayleigh and Wickford,0.0,0.0,0.0,E14000888,5110
+315,1446,Chris Bryant,Labour,Rhondda,0.0,0.0,0.0,W07000052,2544
+316,1447,Andrew Rosindell,Conservative,Romford,0.0,0.0,0.0,E14000900,5344
+317,1451,Richard Bacon,Conservative,South Norfolk,0.0,0.0,1.0,E14000941,10469
+318,1463,Tom Watson,Labour,West Bromwich East,0.0,0.0,0.0,E14001029,2434
+319,1470,Ian C. Lucas,Labour,Wrexham,0.0,0.0,0.0,W07000044,4213
+320,1474,Albert Owen,Labour,Ynys Môn,0.0,0.0,0.0,W07000041,4846
+321,1481,Nadine Dorries,Conservative,Mid Bedfordshire,0.0,1.0,1.0,E14000813,9810
+322,1484,Helen Goodman,Labour,Bishop Auckland,0.0,0.0,0.0,E14000569,3963
+323,1489,Dawn Butler,Labour,Brent Central,0.0,0.0,0.0,E14000591,13347
+324,1490,Madeleine Moon,Labour,Bridgend,0.0,0.0,0.0,W07000073,5555
+325,1491,Kerry McCarthy,Labour,Bristol East,0.0,0.0,0.0,E14000599,12778
+326,1496,Shailesh Vara,Conservative,North West Cambridgeshire,0.0,0.0,1.0,E14000855,9421
+327,1500,Theresa Villiers,Conservative,Chipping Barnet,0.0,0.0,0.0,E14000636,16690
+328,1501,Roberta Blackman-Woods,Labour,City of Durham,0.0,0.0,0.0,E14000641,8652
+329,1502,David Jones,Conservative,Clwyd West,0.0,0.0,0.0,W07000059,5527
+330,1506,Andrew Gwynne,Labour,Denton and Reddish,0.0,0.0,0.0,E14000661,4674
+331,1510,Edward Miliband,Labour,Doncaster North,0.0,0.0,0.0,E14000669,2719
+332,1513,Jo Swinson,Liberal Democrat,East Dunbartonshire,0.0,0.0,0.0,S14000018,13266
+333,1514,Stewart Hosie,Scottish National Party,Dundee East,0.0,0.0,0.0,S14000015,7851
+334,1516,Andy Slaughter,Labour,Hammersmith,0.0,0.0,0.0,E14000726,22520
+335,1520,Mark Harper,Conservative,Forest of Dean,0.0,0.0,1.0,E14000705,6959
+336,1521,Sharon Hodgson,Labour,Washington and Sunderland West,0.0,0.0,0.0,E14001020,3423
+337,1522,Adam Holloway,Conservative,Gravesham,0.0,0.0,0.0,E14000715,5205
+338,1524,Meg Hillier,Labour,Hackney South and Shoreditch,0.0,0.0,0.0,E14000721,26899
+339,1526,Greg Hands,Conservative,Chelsea and Fulham,0.0,1.0,1.0,E14000629,20814
+340,1528,Mike Penning,Conservative,Hemel Hempstead,0.0,1.0,1.0,E14000739,9102
+341,1533,Diana Johnson,Labour,Kingston upon Hull North,0.0,0.0,0.0,E14000772,4809
+342,1536,Emily Thornberry,Labour,Islington South and Finsbury,0.0,0.0,0.0,E14000764,23770
+343,1537,Philip Hollobone,Conservative,Kettering,0.0,0.0,0.0,E14000769,5997
+344,1538,Rosie Cooper,Labour,West Lancashire,0.0,0.0,1.0,E14001033,6831
+345,1541,Nia Griffith,Labour,Llanelli,0.0,0.0,0.0,W07000045,4160
+346,1546,Angus Brendan MacNeil,Scottish National Party,Na h-Eileanan an Iar,0.0,0.0,0.0,S14000027,2423
+347,1548,Jessica Morden,Labour,Newport East,0.0,0.0,0.0,W07000055,4303
+348,1555,Justine Greening,Conservative,Putney,0.0,0.0,0.0,E14000887,20580
+349,1559,James Duddridge,Conservative,Rochford and Southend East,0.0,0.0,0.0,E14000899,6323
+350,1564,Angela Smith,Labour,Penistone and Stocksbridge,0.0,0.0,0.0,E14000876,5497
+351,1565,Philip Davies,Conservative,Shipley,0.0,1.0,1.0,E14000925,9298
+352,1566,Daniel Kawczynski,Conservative,Shrewsbury and Atcham,0.0,0.0,1.0,E14000926,9633
+353,1568,Anne Main,Conservative,St Albans,0.0,0.0,1.0,E14000960,17686
+354,1576,Mark Pritchard,Conservative,The Wrekin,0.0,1.0,1.0,E14000992,5305
+355,1579,Mary Creagh,Labour,Wakefield,0.0,0.0,0.0,E14001009,4732
+356,1581,Peter Bone,Conservative,Wellingborough,0.0,0.0,0.0,E14001025,5915
+357,1582,Grant Shapps,Conservative,Welwyn Hatfield,0.0,0.0,1.0,E14001027,10203
+358,1583,Lyn Brown,Labour,West Ham,0.0,0.0,0.0,E14001032,14773
+359,1586,Adam Afriyie,Conservative,Windsor,0.0,0.0,0.0,E14001042,12420
+360,1587,Pat McFadden,Labour,Wolverhampton South East,0.0,0.0,0.0,E14001050,2213
+361,1588,Barbara Keeley,Labour,Worsley and Eccles South,0.0,0.0,0.0,E14001054,5776
+362,1591,Tim Farron,Liberal Democrat,Westmorland and Lonsdale,0.0,0.0,0.0,E14001037,10014
+363,1593,Sammy Wilson,Democratic Unionist Party,East Antrim,0.0,0.0,0.0,N06000005,5278
+364,1597,David Simpson,Democratic Unionist Party,Upper Bann,0.0,0.0,0.0,N06000017,6412
+365,1603,Phil Wilson,Labour,Sedgefield,0.0,0.0,0.0,E14000915,3671
+366,1604,Virendra Sharma,Labour,"Ealing, Southall",0.0,0.0,0.0,E14000676,8656
+367,3910,Guto Bebb,Conservative,Aberconwy,0.0,0.0,0.0,W07000058,4749
+368,3913,Jack Dromey,Labour,"Birmingham, Erdington",0.0,0.0,0.0,E14000561,3596
+369,3914,Shabana Mahmood,Labour,"Birmingham, Ladywood",0.0,0.0,0.0,E14000564,7244
+370,3915,Gloria De Piero,Labour,Ashfield,0.0,0.0,0.0,E14000535,3446
+371,3917,John Woodcock,Independent,Barrow and Furness,0.0,0.0,0.0,E14000543,4748
+372,3919,Bob Stewart,Conservative,Beckenham,0.0,0.0,1.0,E14000551,12185
+373,3921,Phillip Lee,Conservative,Bracknell,0.0,0.0,0.0,E14000586,9905
+374,3922,Conor Burns,Conservative,Bournemouth West,0.0,0.0,1.0,E14000585,8669
+375,3924,Yasmin Qureshi,Labour,Bolton South East,0.0,0.0,0.0,E14000579,3148
+376,3930,Caroline Lucas,Green Party,"Brighton, Pavilion",0.0,0.0,0.0,E14000598,29256
+377,3938,Anna Soubry,Conservative,Broxtowe,0.0,0.0,0.0,E14000607,9804
+378,3943,Jonathan Edwards,Plaid Cymru,Carmarthen East and Dinefwr,0.0,0.0,0.0,W07000067,5246
+379,3950,Tracey Crouch,Conservative,Chatham and Aylesford,0.0,1.0,1.0,E14000626,4720
+380,3952,Toby Perkins,Labour,Chesterfield,0.0,0.0,0.0,E14000632,5297
+381,3956,Susan Elan Jones,Labour,Clwyd South,0.0,0.0,0.0,W07000062,4190
+382,3957,Martin Vickers,Conservative,Cleethorpes,0.0,1.0,1.0,E14000643,3318
+383,3958,Fiona Bruce,Conservative,Congleton,0.0,1.0,1.0,E14000646,8178
+384,3960,Henry Smith,Conservative,Crawley,0.0,0.0,1.0,E14000652,6998
+385,3966,Ian Murray,Labour,Edinburgh South,0.0,0.0,0.0,S14000024,20615
+386,3970,Gareth Johnson,Conservative,Dartford,0.0,0.0,1.0,E14000659,6294
+387,3971,Charlie Elphicke,Conservative,Dover,0.0,0.0,1.0,E14000670,6528
+388,3972,Jenny Chapman,Labour,Darlington,0.0,0.0,0.0,E14000658,5063
+389,3973,Grahame Morris,Labour,Easington,0.0,0.0,0.0,E14000677,2230
+390,3976,Chris Williamson,Labour,Derby North,0.0,0.0,0.0,E14000662,7481
+391,3980,Sam Gyimah,Conservative,East Surrey,0.0,0.0,0.0,E14000681,11288
+392,3985,Robert Halfon,Conservative,Harlow,0.0,1.0,1.0,E14000729,4624
+393,3986,Damian Collins,Conservative,Folkestone and Hythe,0.0,0.0,1.0,E14000704,8760
+394,3987,Rehman Chishti,Conservative,Gillingham and Rainham,0.0,0.0,1.0,E14000711,5063
+395,3999,Graham P Jones,Labour,Hyndburn,0.0,0.0,0.0,E14000758,3169
+396,4000,Ian Mearns,Labour,Gateshead,0.0,0.0,0.0,E14000709,6052
+397,4003,Teresa Pearce,Labour,Erith and Thamesmead,0.0,0.0,0.0,E14000696,5643
+398,4005,Bob Blackman,Conservative,Harrow East,0.0,1.0,1.0,E14000731,7496
+399,4006,Matthew Offord,Conservative,Hendon,0.0,1.0,1.0,E14000741,11829
+400,4007,Dominic Raab,Conservative,Esher and Walton,0.0,0.0,1.0,E14000697,17811
+401,4013,Gavin Shuker,Labour,Luton South,0.0,0.0,0.0,E14000801,5148
+402,4025,Pauline Latham,Conservative,Mid Derbyshire,0.0,0.0,1.0,E14000814,7492
+403,4026,Liz Kendall,Labour,Leicester West,0.0,0.0,0.0,E14000784,5401
+404,4029,Lilian Greenwood,Labour,Nottingham South,0.0,0.0,0.0,E14000867,9440
+405,4030,Karl Turner,Labour,Kingston upon Hull East,0.0,0.0,0.0,E14000771,2362
+406,4031,Rachel Reeves,Labour,Leeds West,0.0,0.0,0.0,E14000781,7872
+407,4034,Yvonne Fovargue,Labour,Makerfield,0.0,0.0,0.0,E14000805,3849
+408,4036,Luciana Berger,Labour,"Liverpool, Wavertree",0.0,0.0,0.0,E14000795,9145
+409,4039,Joseph Johnson,Conservative,Orpington,0.0,0.0,0.0,E14000872,8086
+410,4040,Chris Evans,Labour,Islwyn,0.0,0.0,0.0,W07000077,3277
+411,4042,Owen Smith,Labour,Pontypridd,0.0,0.0,0.0,W07000075,5898
+412,4046,Bridget Phillipson,Labour,Houghton and Sunderland South,0.0,0.0,0.0,E14000754,3146
+413,4050,Gordon Henderson,Conservative,Sittingbourne and Sheppey,0.0,0.0,1.0,E14000927,4775
+414,4056,Nic Dakin,Labour,Scunthorpe,0.0,,,E14000914,2785
+415,4058,Paul Blomfield,Labour,Sheffield Central,0.0,0.0,0.0,E14000919,16120
+416,4061,Bill Esterson,Labour,Sefton Central,0.0,0.0,0.0,E14000916,8260
+417,4062,Zac Goldsmith,Conservative,Richmond Park,0.0,1.0,1.0,E14000896,27914
+418,4064,Steve Baker,Conservative,Wycombe,0.0,0.0,0.0,E14001056,10545
+419,4066,Priti Patel,Conservative,Witham,0.0,0.0,0.0,E14001045,6213
+420,4073,Sarah Wollaston,Conservative,Totnes,0.0,0.0,0.0,E14001001,10948
+421,4076,Valerie Vaz,Labour,Walsall South,0.0,0.0,0.0,E14001012,3508
+422,4077,Emma Reynolds,Labour,Wolverhampton North East,0.0,0.0,0.0,E14001049,2399
+423,4079,Julian Sturdy,Conservative,York Outer,0.0,1.0,1.0,E14001062,10801
+424,4082,Lisa Nandy,Labour,Wigan,0.0,0.0,0.0,E14001039,4581
+425,4083,Alison McGovern,Labour,Wirral South,0.0,0.0,0.0,E14001043,6899
+426,4084,Esther McVey,Conservative,Tatton,0.0,0.0,1.0,E14000987,9830
+427,4088,Stella Creasy,Labour,Walthamstow,0.0,0.0,0.0,E14001013,17760
+428,4090,Jonathan Lord,Conservative,Woking,0.0,0.0,1.0,E14001047,13884
+429,4092,Stephen Metcalfe,Conservative,South Basildon and East Thurrock,0.0,1.0,1.0,E14000933,3610
+430,4093,Stephen McPartland,Conservative,Stevenage,0.0,1.0,1.0,E14000968,6905
+431,4099,Jacob Rees-Mogg,Conservative,North East Somerset,0.0,0.0,1.0,E14000846,10940
+432,4100,Sheryll Murray,Conservative,South East Cornwall,0.0,0.0,1.0,E14000938,7704
+433,4119,Jonathan Reynolds,Labour,Stalybridge and Hyde,0.0,0.0,0.0,E14000967,5227
+434,4120,Kate Green,Labour,Stretford and Urmston,0.0,0.0,0.0,E14000979,9759
+435,4122,Alex Cunningham,Labour,Stockton North,0.0,0.0,0.0,E14000970,3258
+436,4124,Chi Onwurah,Labour,Newcastle upon Tyne Central,0.0,0.0,0.0,E14000831,7225
+437,4125,Catherine McKinnell,Labour,Newcastle upon Tyne North,0.0,0.0,0.0,E14000833,7624
+438,4126,Mary Glindon,Labour,North Tyneside,0.0,0.0,0.0,E14000853,6166
+439,4127,Julie Elliott,Labour,Sunderland Central,0.0,0.0,0.0,E14000982,4588
+440,4128,Chuka Umunna,Labour,Streatham,0.0,0.0,0.0,E14000978,24924
+441,4129,Ian Paisley,Democratic Unionist Party,North Antrim,0.0,0.0,0.0,N06000012,4653
+442,4131,Jim Shannon,Democratic Unionist Party,Strangford,0.0,0.0,0.0,N06000016,4885
+443,4132,Richard Drax,Conservative,South Dorset,0.0,0.0,1.0,E14000936,7167
+444,4133,Andrew Bridgen,Conservative,North West Leicestershire,0.0,0.0,0.0,E14000858,6078
+445,4136,Nigel Mills,Conservative,Amber Valley,0.0,1.0,1.0,E14000533,4129
+446,4138,Rushanara Ali,Labour,Bethnal Green and Bow,0.0,0.0,0.0,E14000555,24685
+447,4139,Ian Lavery,Labour,Wansbeck,0.0,0.0,0.0,E14001014,4302
+448,4212,Debbie Abrahams,Labour,Oldham East and Saddleworth,0.0,0.0,0.0,E14000870,4856
+449,4243,Dan Jarvis,Labour,Barnsley Central,0.0,0.0,0.0,E14000541,3141
+450,4244,Jonathan Ashworth,Labour,Leicester South,0.0,0.0,0.0,E14000783,8574
+451,4249,Anne Marie Morris,Conservative,Newton Abbot,0.0,0.0,0.0,E14000835,8103
+452,4253,Seema Malhotra,Labour,Feltham and Heston,0.0,0.0,0.0,E14000701,6600
+453,4263,Lucy Powell,Labour,Manchester Central,0.0,0.0,0.0,E14000807,14954
+454,4264,Stephen Doughty,Labour,Cardiff South and Penarth,0.0,0.0,0.0,W07000080,11642
+455,4267,Sarah Champion,Labour,Rotherham,0.0,0.0,0.0,E14000904,2454
+456,4268,Steve Reed,Labour,Croydon North,0.0,0.0,0.0,E14000655,12411
+457,4269,Andy McDonald,Labour,Middlesbrough,0.0,0.0,0.0,E14000819,3008
+458,4277,Emma Lewell-Buck,Labour,South Shields,0.0,0.0,0.0,E14000944,3469
+459,4316,Mike Kane,Labour,Wythenshawe and Sale East,0.0,0.0,0.0,E14001059,8847
+460,4342,Liz McInnes,Labour,Heywood and Middleton,0.0,0.0,0.0,E14000747,4671
+461,4356,Angela Rayner,Labour,Ashton-under-Lyne,0.0,0.0,0.0,E14000537,3982
+462,4357,Kirsty Blackman,Scottish National Party,Aberdeen North,0.0,0.0,0.0,S14000001,9344
+463,4359,Stephen Kinnock,Labour,Aberavon,0.0,0.0,0.0,W07000049,3059
+464,4360,Gavin Robinson,Democratic Unionist Party,Belfast East,0.0,0.0,0.0,N06000001,7621
+465,4363,Kate Hollern,Labour,Blackburn,0.0,0.0,0.0,E14000570,3207
+466,4365,Neil Gray,Scottish National Party,Airdrie and Shotts,0.0,0.0,0.0,S14000003,5107
+467,4368,Neil Coyle,Labour,Bermondsey and Old Southwark,0.0,0.0,0.0,E14000553,25345
+468,4369,Tom Pursglove,Conservative,Corby,0.0,0.0,1.0,E14000648,7341
+469,4370,Jess Phillips,Labour,"Birmingham, Yardley",0.0,0.0,0.0,E14000568,3870
+470,4371,Brendan O'Hara,Scottish National Party,Argyll and Bute,0.0,0.0,0.0,S14000005,9740
+471,4374,Martin Docherty-Hughes,Scottish National Party,West Dunbartonshire,0.0,0.0,0.0,S14000059,6846
+472,4378,Colleen Fletcher,Labour,Coventry North East,0.0,0.0,0.0,E14000649,5091
+473,4382,Daniel Zeichner,Labour,Cambridge,0.0,0.0,0.0,E14000617,28185
+474,4385,Philippa Whitford,Scottish National Party,Central Ayrshire,0.0,0.0,0.0,S14000010,6202
+475,4389,Ruth Cadbury,Labour,Brentford and Isleworth,0.0,0.0,0.0,E14000593,19838
+476,4390,Ian Blackford,Scottish National Party,"Ross, Skye and Lochaber",0.0,0.0,0.0,S14000055,9135
+477,4391,Judith Cummins,Labour,Bradford South,0.0,0.0,0.0,E14000588,3027
+478,4393,Stuart C. McDonald,Scottish National Party,"Cumbernauld, Kilsyth and Kirkintilloch East",0.0,0.0,0.0,S14000012,7727
+479,4394,Imran Hussain,Labour,Bradford East,0.0,0.0,0.0,E14000587,3421
+480,4395,Sue Hayman,Labour,Workington,0.0,0.0,0.0,E14001053,4007
+481,4396,Rebecca Long Bailey,Labour,Salford and Eccles,0.0,0.0,0.0,E14000911,10489
+482,4397,Peter Dowd,Labour,Bootle,0.0,0.0,0.0,E14000581,6949
+483,4398,Chris Green,Conservative,Bolton West,0.0,0.0,1.0,E14000580,5695
+484,4400,Margaret Greenwood,Labour,Wirral West,0.0,0.0,0.0,E14001044,7595
+485,4402,Douglas Chapman,Scottish National Party,Dunfermline and West Fife,0.0,0.0,0.0,S14000017,10195
+486,4403,Chris Law,Scottish National Party,Dundee West,0.0,0.0,0.0,S14000016,8674
+487,4405,Julie Cooper,Labour,Burnley,0.0,0.0,0.0,E14000609,2770
+488,4408,Christian Matheson,Labour,City of Chester,0.0,0.0,0.0,E14000640,11620
+489,4409,Naz Shah,Labour,Bradford West,0.0,0.0,0.0,E14000589,3644
+490,4411,Lucy Allan,Conservative,Telford,0.0,0.0,1.0,E14000989,4243
+491,4412,Lisa Cameron,Scottish National Party,"East Kilbride, Strathaven and Lesmahagow",0.0,0.0,0.0,S14000019,9891
+492,4417,Deidre Brock,Scottish National Party,Edinburgh North and Leith,0.0,0.0,0.0,S14000023,28081
+493,4418,Justin Madders,Labour,Ellesmere Port and Neston,0.0,0.0,0.0,E14000688,6180
+494,4419,Joanna Cherry,Scottish National Party,Edinburgh South West,0.0,0.0,0.0,S14000025,17869
+495,4420,Gavin Newlands,Scottish National Party,Paisley and Renfrewshire North,0.0,0.0,0.0,S14000052,8807
+496,4421,Mhairi Black,Scottish National Party,Paisley and Renfrewshire South,0.0,0.0,0.0,S14000053,7809
+497,4423,Will Quince,Conservative,Colchester,0.0,1.0,1.0,E14000644,10050
+498,4424,John McNally,Scottish National Party,Falkirk,0.0,0.0,,S14000028,9070
+499,4425,Jo Stevens,Labour,Cardiff Central,0.0,0.0,0.0,W07000050,11996
+500,4426,Paula Sherriff,Labour,Dewsbury,0.0,0.0,0.0,E14000666,5408
+501,4429,William Wragg,Conservative,Hazel Grove,0.0,1.0,1.0,E14000738,7579
+502,4430,Alison Thewliss,Scottish National Party,Glasgow Central,0.0,0.0,0.0,S14000029,14620
+503,4432,Patrick Grady,Scottish National Party,Glasgow North,0.0,0.0,0.0,S14000031,15149
+504,4433,Thangam Debbonaire,Labour,Bristol West,0.0,,,E14000602,37215
+505,4434,Stephen Gethins,Scottish National Party,North East Fife,0.0,0.0,0.0,S14000049,10639
+506,4435,Patricia Gibson,Scottish National Party,North Ayrshire and Arran,0.0,0.0,0.0,S14000048,6904
+507,4436,Cat Smith,Labour,Lancaster and Fleetwood,0.0,0.0,0.0,E14000776,8213
+508,4440,Marion Fellows,Scottish National Party,Motherwell and Wishaw,0.0,0.0,0.0,S14000047,5816
+509,4443,Carol Monaghan,Scottish National Party,Glasgow North West,0.0,0.0,0.0,S14000033,10971
+510,4444,Karin Smyth,Labour,Bristol South,0.0,0.0,0.0,E14000601,15997
+511,4446,Marcus Fysh,Conservative,Yeovil,0.0,0.0,0.0,E14001060,7299
+512,4449,Anna Turley,Labour,Redcar,0.0,0.0,0.0,E14000891,2664
+513,4452,Steve Double,Conservative,St Austell and Newquay,0.0,1.0,1.0,E14000961,6904
+514,4453,Tommy Sheppard,Scottish National Party,Edinburgh East,0.0,0.0,0.0,S14000022,19563
+515,4456,Jeff Smith,Labour,"Manchester, Withington",0.0,0.0,0.0,E14000809,20017
+516,4457,Marie Rimmer,Labour,St Helens South and Whiston,0.0,0.0,0.0,E14000963,5454
+517,4458,Conor McGinn,Labour,St Helens North,0.0,0.0,0.0,E14000962,5044
+518,4461,Stewart Malcolm McDonald,Scottish National Party,Glasgow South,0.0,0.0,0.0,S14000034,13722
+519,4463,Chris Stephens,Scottish National Party,Glasgow South West,0.0,0.0,0.0,S14000035,6190
+520,4464,Melanie Onn,Labour,Great Grimsby,0.0,0.0,0.0,E14000716,2448
+521,4465,Ronnie Cowan,Scottish National Party,Inverclyde,0.0,0.0,0.0,S14000038,6274
+522,4466,Peter Grant,Scottish National Party,Glenrothes,0.0,0.0,0.0,S14000036,4715
+523,4467,Drew Hendry,Scottish National Party,"Inverness, Nairn, Badenoch and Strathspey",0.0,0.0,0.0,S14000039,10623
+524,4469,Angela Crawley,Scottish National Party,Lanark and Hamilton East,0.0,0.0,0.0,S14000042,7970
+525,4470,Alan Brown,Scottish National Party,Kilmarnock and Loudoun,0.0,0.0,0.0,S14000040,6594
+526,4471,Rachael Maskell,Labour,York Central,0.0,0.0,0.0,E14001061,14955
+527,4472,Holly Lynch,Labour,Halifax,0.0,0.0,0.0,E14000723,4542
+528,4473,Louise Haigh,Labour,"Sheffield, Heeley",0.0,0.0,0.0,E14000923,7635
+529,4475,Suella Braverman,Conservative,Fareham,0.0,0.0,0.0,E14000699,8231
+530,4478,Royston Smith,Conservative,"Southampton, Itchen",0.0,0.0,1.0,E14000955,8169
+531,4479,Nick Thomas-Symonds,Labour,Torfaen,0.0,0.0,0.0,W07000053,3742
+532,4480,Carolyn Harris,Labour,Swansea East,0.0,0.0,0.0,W07000048,3849
+533,4485,Johnny Mercer,Conservative,"Plymouth, Moor View",0.0,1.0,1.0,E14000879,3662
+534,4486,Hannah Bardell,Scottish National Party,Livingston,0.0,0.0,0.0,S14000044,9691
+535,4488,Martyn Day,Scottish National Party,Linlithgow and East Falkirk,0.0,0.0,0.0,S14000043,10250
+536,4490,Andrea Jenkyns,Conservative,Morley and Outwood,0.0,0.0,0.0,E14000826,5864
+537,4492,Maria Caulfield,Conservative,Lewes,0.0,1.0,1.0,E14000786,14217
+538,4493,Richard Burgon,Labour,Leeds East,0.0,0.0,0.0,E14000778,3984
+539,4496,Scott Mann,Conservative,North Cornwall,0.0,1.0,1.0,E14000837,7014
+540,4497,Michael Tomlinson,Conservative,Mid Dorset and North Poole,0.0,0.0,1.0,E14000815,7255
+541,4498,Ranil Jayawardena,Conservative,North East Hampshire,0.0,0.0,0.0,E14000844,12418
+542,4500,Clive Lewis,Labour,Norwich South,0.0,0.0,0.0,E14000864,15275
+543,4501,Gerald Jones,Labour,Merthyr Tydfil and Rhymney,0.0,0.0,0.0,W07000071,2785
+544,4504,Wes Streeting,Labour,Ilford North,0.0,0.0,0.0,E14000759,8015
+545,4505,Peter Kyle,Labour,Hove,0.0,0.0,0.0,E14000755,22920
+546,4508,Ruth Smeeth,Labour,Stoke-on-Trent North,0.0,0.0,0.0,E14000973,2650
+547,4509,Craig Tracey,Conservative,North Warwickshire,0.0,0.0,1.0,E14000854,3671
+548,4510,Helen Hayes,Labour,Dulwich and West Norwood,0.0,0.0,0.0,E14000673,26572
+549,4511,Rupa Huq,Labour,Ealing Central and Acton,0.0,0.0,0.0,E14000674,23914
+550,4514,Keir Starmer,Labour,Holborn and St Pancras,0.0,0.0,0.0,E14000750,28387
+551,4515,Kate Osamor,Labour,Edmonton,0.0,0.0,0.0,E14000687,5312
+552,4516,Heidi Allen,Conservative,South Cambridgeshire,0.0,0.0,0.0,E14000934,20805
+553,4518,Tulip Siddiq,Labour,Hampstead and Kilburn,0.0,0.0,0.0,E14000727,29154
+554,4520,Matthew Pennycook,Labour,Greenwich and Woolwich,0.0,0.0,0.0,E14000718,19493
+555,4521,Liz Saville Roberts,Plaid Cymru,Dwyfor Meirionnydd,0.0,0.0,0.0,W07000061,4946
+556,4523,Catherine West,Labour,Hornsey and Wood Green,0.0,0.0,0.0,E14000752,32218
+557,4525,Christina Rees,Labour,Neath,0.0,0.0,0.0,W07000069,3943
+558,4529,Craig Mackinlay,Conservative,South Thanet,0.0,0.0,0.0,E14000948,7940
+559,4531,Anne-Marie Trevelyan,Conservative,Berwick-upon-Tweed,0.0,0.0,1.0,E14000554,5369
+560,4532,Derek Thomas,Conservative,St Ives,0.0,1.0,1.0,E14000964,8847
+561,4569,Jim McMahon,Labour,Oldham West and Royton,0.0,0.0,0.0,E14000871,3218
+562,4571,Gill Furniss,Labour,"Sheffield, Brightside and Hillsborough",0.0,0.0,0.0,E14000921,4574
+563,4572,Chris Elmore,Labour,Ogmore,0.0,0.0,0.0,W07000074,3668
+564,4573,Rosena Allin-Khan,Labour,Tooting,0.0,0.0,0.0,E14000998,23052
+565,4588,Tracy Brabin,Labour,Batley and Spen,0.0,0.0,0.0,E14000548,4211
+566,4589,Robert Courts,Conservative,Witney,0.0,0.0,1.0,E14001046,14037
+567,4595,Gareth Snell,Labour,Stoke-on-Trent Central,0.0,0.0,0.0,E14000972,3291
+568,4598,Mohammad Yasin,Labour,Bedford,0.0,0.0,0.0,E14000552,7924
+569,4599,Ross Thomson,Conservative,Aberdeen South,0.0,0.0,1.0,S14000002,11093
+570,4602,Wera Hobhouse,Liberal Democrat,Bath,0.0,0.0,0.0,E14000547,18503
+571,4603,Preet Kaur Gill,Labour,"Birmingham, Edgbaston",0.0,0.0,0.0,E14000560,8630
+572,4607,Stephanie Peacock,Labour,Barnsley East,0.0,0.0,0.0,E14000542,2465
+573,4608,John Lamont,Conservative,"Berwickshire, Roxburgh and Selkirk",0.0,1.0,1.0,S14000008,8377
+574,4609,Eleanor Smith,Labour,Wolverhampton South West,0.0,0.0,0.0,E14001051,4839
+575,4610,Bambos Charalambous,Labour,"Enfield, Southgate",0.0,0.0,0.0,E14000692,13800
+576,4611,Emma Little Pengelly,Democratic Unionist Party,Belfast South,0.0,0.0,0.0,N06000003,16029
+577,4612,Jamie Stone,Liberal Democrat,"Caithness, Sutherland and Easter Ross",0.0,0.0,0.0,S14000009,4298
+578,4614,Hugh Gaffney,Labour,"Coatbridge, Chryston and Bellshill",0.0,0.0,0.0,S14000011,6979
+579,4615,Lloyd Russell-Moyle,Labour,"Brighton, Kemptown",0.0,0.0,0.0,E14000597,15157
+580,4616,Rosie Duffield,Labour,Canterbury,0.0,0.0,0.0,E14000619,14829
+581,4617,Matt Western,Labour,Warwick and Leamington,0.0,0.0,0.0,E14001019,14828
+582,4618,Liz Twist,Labour,Blaydon,0.0,0.0,0.0,E14000574,5947
+583,4620,Ellie Reeves,Labour,Lewisham West and Penge,0.0,0.0,0.0,E14000788,20046
+584,4621,Darren Jones,Labour,Bristol North West,0.0,0.0,0.0,E14000600,15445
+585,4623,Tonia Antoniazzi,Labour,Gower,0.0,0.0,0.0,W07000046,6952
+586,4626,Martin Whitfield,Labour,East Lothian,0.0,0.0,0.0,S14000020,13212
+587,4627,Douglas Ross,Conservative,Moray,0.0,,1.0,S14000046,6478
+588,4628,Danielle Rowley,Labour,Midlothian,0.0,0.0,0.0,S14000045,9543
+589,4629,Fiona Onasanya,Independent,Peterborough,0.0,0.0,0.0,E14000878,6133
+590,4630,Ben Lake,Plaid Cymru,Ceredigion,0.0,0.0,0.0,W07000064,8128
+591,4631,Sarah Jones,Labour,Croydon Central,0.0,0.0,0.0,E14000654,10089
+592,4632,Anna McMorrin,Labour,Cardiff North,0.0,0.0,0.0,W07000051,11962
+593,4633,Paul Girvan,Democratic Unionist Party,South Antrim,0.0,0.0,0.0,N06000014,6341
+594,4634,Christine Jardine,Liberal Democrat,Edinburgh West,0.0,0.0,0.0,S14000026,15227
+595,4635,Eddie Hughes,Conservative,Walsall North,0.0,0.0,1.0,E14001011,2001
+596,4637,James Frith,Labour,Bury North,0.0,0.0,0.0,E14000611,5906
+597,4638,Tanmanjeet Singh Dhesi,Labour,Slough,0.0,0.0,0.0,E14000930,6983
+598,4640,David Linden,Scottish National Party,Glasgow East,0.0,0.0,0.0,S14000030,5189
+599,4641,Alex Norris,Labour,Nottingham North,0.0,0.0,0.0,E14000866,3571
+600,4642,Paul Sweeney,Labour,Glasgow North East,0.0,0.0,0.0,S14000032,6157
+601,4644,Mike Hill,Labour,Hartlepool,0.0,0.0,0.0,E14000733,2795
+602,4645,Emma Hardy,Labour,Kingston upon Hull West and Hessle,0.0,0.0,0.0,E14000773,3374
+603,4647,Julia Lopez,Conservative,Hornchurch and Upminster,0.0,0.0,0.0,E14000751,5750
+604,4648,Laura Smith,Labour,Crewe and Nantwich,0.0,0.0,0.0,E14000653,7040
+605,4649,Thelma Walker,Labour,Colne Valley,0.0,0.0,0.0,E14000645,9095
+606,4651,Dan Carden,Labour,"Liverpool, Walton",0.0,0.0,0.0,E14000794,4747
+607,4652,Lee Rowley,Conservative,North East Derbyshire,0.0,0.0,0.0,E14000843,4957
+608,4653,Stephen Morgan,Labour,Portsmouth South,0.0,0.0,0.0,E14000884,9960
+609,4654,Matt Rodda,Labour,Reading East,0.0,0.0,0.0,E14000889,16037
+610,4655,Simon Clarke,Conservative,Middlesbrough South and East Cleveland,0.0,0.0,1.0,E14000820,4060
+611,4656,Layla Moran,Liberal Democrat,Oxford West and Abingdon,0.0,0.0,0.0,E14000874,21927
+612,4657,Anneliese Dodds,Labour,Oxford East,0.0,0.0,0.0,E14000873,21541
+613,4658,Alex Sobel,Labour,Leeds North West,0.0,0.0,0.0,E14000780,11703
+614,4659,Andrew Lewer,Conservative,Northampton South,0.0,0.0,1.0,E14000862,6084
+615,4660,Lesley Laird,Labour,Kirkcaldy and Cowdenbeath,0.0,0.0,0.0,S14000041,7454
+616,4661,Jared O'Mara,Independent,"Sheffield, Hallam",0.0,0.0,0.0,E14000922,15701
+617,4662,Ruth George,Labour,High Peak,0.0,0.0,0.0,E14000748,9971
+618,4663,Ben Bradley,Conservative,Mansfield,0.0,1.0,1.0,E14000810,3612
+619,4664,Karen Lee,Labour,Lincoln,0.0,0.0,0.0,E14000792,7623
+620,4665,Laura Pidcock,Labour,North West Durham,0.0,0.0,0.0,E14000856,5269
+621,4666,Paul Williams,Labour,Stockton South,0.0,0.0,0.0,E14000971,5324
+622,4667,Mike Amesbury,Labour,Weaver Vale,0.0,0.0,0.0,E14001024,7621
+623,4669,Damien Moore,Conservative,Southport,0.0,1.0,1.0,E14000958,7324
+624,4670,Faisal Rashid,Labour,Warrington South,0.0,0.0,0.0,E14001018,10188
+625,4671,Afzal Khan,Labour,"Manchester, Gorton",0.0,0.0,0.0,E14000808,10401
+626,4672,Ged Killen,Labour,Rutherglen and Hamilton West,0.0,0.0,0.0,S14000056,8830
+627,4673,Jo Platt,Labour,Leigh,0.0,0.0,0.0,E14000785,4429
+628,4676,Marsha De Cordova,Labour,Battersea,0.0,0.0,0.0,E14000549,24744
+629,4677,Giles Watling,Conservative,Clacton,0.0,1.0,1.0,E14000642,2813
+630,4678,Sandy Martin,Labour,Ipswich,0.0,0.0,0.0,E14000761,8005
+631,4682,Luke Pollard,Labour,"Plymouth, Sutton and Devonport",0.0,0.0,0.0,E14000880,10427
+632,4683,Emma Dent Coad,Labour,Kensington,0.0,0.0,0.0,E14000768,21722
+633,4698,Janet Daby,Labour,Lewisham East,0.0,0.0,0.0,E14000787,13684
+634,4358,Wendy Morton,Conservative,Aldridge-Brownhills,,1.0,1.0,E14000531,3025
+635,3928,Nick Smith,Labour,Blaenau Gwent,,0.0,0.0,W07000072,2264
+636,4491,Vicky Foxcroft,Labour,"Lewisham, Deptford",,0.0,0.0,E14000789,24819
+637,4015,Iain Stewart,Conservative,Milton Keynes South,,,1.0,E14000822,11123

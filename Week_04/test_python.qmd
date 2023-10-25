@@ -15,11 +15,11 @@ import numpy as np
 ```
 
 ```{python}
-df_brexit = pd.read_csv('../UK-Politics-files/brexit-vote.csv')
+df_brexit = pd.read_csv('UK-Politics-files/brexit-vote.csv')
 ```
 
 ```{python}
-df_elec = pd.read_excel('../UK-Politics-files/general-election-results-2019.xlsx', sheet_name = 'voting-summary')
+df_elec = pd.read_excel('UK-Politics-files/general-election-results-2019.xlsx', sheet_name = 'voting-summary')
 ```
 
 ```{python}
