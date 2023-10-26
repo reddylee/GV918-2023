@@ -10,11 +10,11 @@ import pandas as pd
 import numpy as np
 ```
 
-```{bash}
-mkdir UK-Politics-data
-
-wget https://www.dropbox.com/sh/susyp0an187iinj/AAB_HDCcE3T8xCh4MqypigsPa?dl=1 -O UK-Politics-files/UK-Politics.zip
+```{python}
+!mkdir UK-Politics-files
+!wget https://www.dropbox.com/sh/susyp0an187iinj/AAB_HDCcE3T8xCh4MqypigsPa?dl=1 -O UK-Politics-files/UK-Politics.zip
 ```
+
 ```{bash}
 unzip UK-Politics-files/UK-Politics.zip -d UK-Politics-files/
 ```

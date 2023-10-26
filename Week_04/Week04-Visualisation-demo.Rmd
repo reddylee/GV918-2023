@@ -1,0 +1,239 @@
+---
+title: "Week04-Visualisation-demo.ipynb"
+output: html_document
+---
+
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+```{bash}
+#pip3 install seaborn
+```
+
+
+```{python}
+sns.set_style(style = 'whitegrid')
+```
+
+# Read Data
+
+Today, we will use CPS1985 data on the determinant of hourly wages
+
+https://vincentarelbundock.github.io/Rdatasets/csv/AER/CPS1985.csv
+
+The data description is available here:
+https://rdrr.io/cran/AER/man/CPS1985.html
+
+```{python}
+df_wage = pd.read_csv("https://vincentarelbundock.github.io/Rdatasets/csv/AER/CPS1985.csv")
+```
+```{r}
+df_wage <- read.csv("https://vincentarelbundock.github.io/Rdatasets/csv/AER/CPS1985.csv")
+```
+
+```{python}
+df_wage = r.df_wage
+df_wage.head()
+
+```
+
+```{python}
+df_wage.drop(['Unnamed: 0'], axis = 1, inplace = True)
+```
+
+```{python}
+df_wage.describe()
+```
+
+```{python}
+df_wage.corr()
+```
+
+# Visualise one variable
+
+## Distribution plot
+
+```{python}
+sns.histplot(x = 'wage', data = df_wage)
+plt.show()
+```
+
+```{python}
+sns.histplot(x = 'wage', data = df_wage, bins = 100)
+plt.show()
+```
+
+```{python}
+sns.kdeplot(x = 'wage', data = df_wage)
+plt.show()
+```
+
+```{python}
+sns.kdeplot(x = 'wage', data = df_wage, bw_adjust=.1)
+plt.show()
+```
+
+```{python}
+sns.histplot(x = 'wage', data = df_wage, kde = True)
+plt.show()
+```
+
+### Distribution plot, multiple
+
+```{python}
+vars = ['wage', 'age', 'education', 'experience']
+
+fig, axes = plt.subplots(2, 2, figsize = (8, 4))
+axes = axes.flatten()
+
+for i in range(len(vars)):
+  sns.histplot(x = vars[i], data = df_wage, ax = axes[i], kde = True)#i // 2, i % 2], kde = True)
+
+plt.tight_layout()
+```
+
+## Count plot
+
+```{python}
+sns.countplot(x = 'sector', data = df_wage)
+plt.show()
+```
+
+```{python}
+sns.countplot(y = 'sector', data = df_wage)
+plt.show()
+```
+
+```{python}
+vars = ['gender', 'region', 'ethnicity']
+
+fig, axes = plt.subplots(1, 3, figsize = (8, 4))
+
+for i in range(3):
+  sns.countplot(x = vars[i], data =df_wage, ax = axes[i])
+
+plt.tight_layout()
+plt.show()
+```
+
+# Visualise two variables
+
+## Scatter plot
+
+```{python}
+sns.scatterplot(x = 'education', y = 'wage', data = df_wage)
+
+```
+
+```{python}
+sns.scatterplot(x = 'education', y = 'wage', data = df_wage, alpha = .5)
+```
+
+## 2d-density Plot
+
+```{python}
+sns.kdeplot(x = "education", y = "wage", 
+                data = df_wage, fill = True)
+```
+
+## Boxplot, violinplot
+
+```{python}
+sns.boxplot(x = 'ethnicity', y = 'wage', data = df_wage)
+```
+
+```{python}
+sns.violinplot(x = 'ethnicity', y = 'wage', data = df_wage)
+```
+
+## Barplot
+
+```{python}
+sns.barplot(x = 'ethnicity', y = 'wage', data = df_wage, estimator = np.mean)
+```
+
+```{python}
+sns.barplot(x = 'ethnicity', y = 'wage', data = df_wage, estimator = np.std)
+```
+
+# Adding more layers
+
+## Add a variable to scatter plots
+
+```{python}
+plt.figure(figsize=(8, 6))
+sns.scatterplot(x = "education", y = "wage", hue = 'gender',
+                data = df_wage, alpha=.4)
+```
+
+```{python}
+plt.figure(figsize=(8, 6))
+sns.scatterplot(x = "education", y = "age", hue = 'wage',
+                data = df_wage, palette = "Greens")
+```
+
+```{python}
+plt.figure(figsize=(8, 6))
+sns.scatterplot(x = "education", y = "age", size = 'wage', 
+                sizes = (40, 400),
+                data = df_wage, alpha = .3)
+```
+
+## Colours in categorical plots
+
+```{python}
+plt.figure(figsize=(8, 6))
+sns.histplot(x = "wage", hue = 'gender',  multiple="stack",
+                data = df_wage)
+```
+
+```{python}
+plt.figure(figsize=(8, 6))
+sns.boxplot(x = "ethnicity", y = "wage", hue = 'gender',
+                data = df_wage)
+```
+
+# Misc
+
+## Joint plot
+
+```{python}
+plt.figure(figsize = (5, 5))
+sns.jointplot(x ='education', y = "wage",
+                data = df_wage)
+```
+
+```{python}
+plt.figure(figsize = (5, 5))
+sns.jointplot(x ='education', y = "wage", hue = 'gender', alpha = .5,
+                data = df_wage)
+```
+
+```{python}
+plt.figure(figsize = (5, 5))
+sns.jointplot(x ='education', y = "wage",
+                data = df_wage, kind = 'reg')
+```
+
+```{python}
+plt.figure(figsize = (5, 5))
+sns.jointplot(x ='education', y = "wage", 
+                data = df_wage, kind = 'hex')
+```
+
+```{python}
+sns.pairplot(df_wage).savefig("pair.png")
+```
+
+```{python}
+sns.pairplot(df_wage, hue = 'gender', palette="Set1")
+```
+
+```{python}
+sns.load_dataset("iris")
+```
+
+

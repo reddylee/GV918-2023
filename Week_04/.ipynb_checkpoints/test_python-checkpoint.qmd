@@ -30,6 +30,5 @@ df_merged = df_elec.merge(df_brexit, on = 'ons_id')
 ```{r}
 
 rmarkdown::convert_ipynb('Week04-Demo-Pandas-DataFrame-merging-etc.ipynb')
-rmarkdown::convert_ipynb('Week04-Visualisation-demo.ipynb')
-
+rmarkdown::convert_ipynb('Week02-Demo.ipynb')
 ```
