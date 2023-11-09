@@ -1,0 +1,133 @@
+---
+title: "Week06-Demo-and-Exercise-2.ipynb"
+output: html_document
+---
+
+# Tasks
+
+In this part of demo, we will extract information from two websites:
+
+- https://en.wikipedia.org/wiki/International_court
+- https://members.parliament.uk/members/commons
+
+# Load packages
+
+```{python}
+from urllib.request import urlopen, Request
+from bs4 import BeautifulSoup
+import pandas as pd
+```
+
+
+# International court
+
+- Scenario 1
+
+## Extract the first tables using `pandas`
+
+```{python}
+df_tables = pd.read_html("https://en.wikipedia.org/wiki/International_court")
+```
+
+```{python}
+len(df_tables)
+```
+
+```{python}
+df_ic = df_tables[0]
+```
+
+```{python}
+df_ic
+```
+
+## Text modifying
+
+We will try to extract the year of foundation.
+
+### Simple method
+
+- use `*.str.slice()`
+
+### Using regular expression
+
+Regular expression is really a powerful tool for extracting/modifying text in programming. There are several great introductions:
+
+1. LinkedIn Learning (NLP with Python for Machine Learning Essential Training)
+  - https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/what-are-regular-expressions
+  - https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/learning-how-to-use-regular-expressions
+  - https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/regular-expression-replacements
+
+2. YouTube
+  - https://www.youtube.com/watch?v=K8L6KVGG-7o
+
+```{python}
+years = df_ic['Years active']
+```
+
+```{python}
+df_years = years.str.extract(r'(\d{4}).(.+)')
+```
+
+```{python}
+df_years.rename({0: "start", 1: "end"}, axis = 1, inplace = True)
+```
+
+```{python}
+df_ic['Founded'] = df_ic['Years active'].str.extract(r'^(\d{4})').astype(int)
+```
+
+```{python}
+df_ic
+```
+
+## Save the data
+
+```{python}
+df_ic.to_csv("data_iternational_court.csv")
+```
+
+# List of MEPs
+
+In this part of demo, we will create a list of the Members of European Parliament (MEPs).
+
+The base url (list of MEPs with family name starting with letter 'a') is here:
+https://www.europarl.europa.eu/meps/en/full-list/a
+
+## Extract names
+
+- Scenario 2
+  - `bs.select()` then `item.get_text()`
+
+```{python}
+url = "https://www.europarl.europa.eu/meps/en/full-list/a"
+html = urlopen(url)
+bs = BeautifulSoup(html, "html.parser")
+```
+
+```{python}
+names = bs.select('')
+```
+
+## Extract political groups and country names
+
+- Same as above
+
+## Extract party name
+
+- Same
+
+## Extract link to the individual pages
+
+- `bs.select()` then `item['tagname']`
+
+## Combine
+
+```{python}
+df_meps = pd.DataFrame(mep_name, columns = ['names'])
+
+## add more variables
+```
+
+## Save the data
+

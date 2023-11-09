@@ -1,0 +1,91 @@
+---
+title: "Week_06/Week06-demo-1.ipynb"
+output: html_document
+---
+
+# Task
+
+We will parse the example webpage provided in *Web Scraping with Python*, Chapter 2.
+
+The url is:
+
+http://www.pythonscraping.com/pages/warandpeace.html
+
+# Open the webpage in the browser
+
+- Check source
+- Inspect element
+- Selector Gadget
+
+# Load packages
+
+```{python}
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import pandas as pd
+```
+
+# Get the page, put in BeautifulSoup
+
+
+```{python}
+url = 'http://www.pythonscraping.com/pages/warandpeace.html'
+html = urlopen(url)
+```
+
+```{python}
+bs = BeautifulSoup(html, 'html.parser')
+```
+
+```{python}
+bs.h1.get_text()
+```
+
+```{python}
+bs.find_all('h1')
+```
+
+# Extract green text
+
+## With `find_all()`
+
+```{python}
+green_tags = bs.findAll('span', {'class': 'green'})
+```
+
+```{python}
+texts = []
+for gr in green_tags:
+  # print(gr.get_text())
+  texts.append(gr.get_text())
+texts
+```
+
+```{python}
+[gr.get_text() for gr in green_tags]
+```
+
+## With CSS selector
+
+```{python}
+[gr.get_text() for gr in bs.select("span.green")]
+```
+
+# Extract heading text
+
+## With `findAll()`
+
+```{python}
+h_tags = bs.findAll(['h1', 'h2', 'h3', 'h4'])
+h_tags
+[h.getText() for h in h_tags]
+```
+
+## With CSS selector
+
+```{python}
+h_tags = bs.select('h1, h2, h3, h4')
+h_tags
+[h.getText() for h in h_tags]
+```
+

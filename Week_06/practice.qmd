@@ -1,0 +1,5 @@
+```{r}
+rmarkdown::convert_ipynb('Week06-Demo-and-Exercise-2.ipynb')
+rmarkdown::convert_ipynb('Week06_regex_excercise.ipynb')
+```
+

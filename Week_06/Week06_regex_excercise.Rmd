@@ -1,0 +1,62 @@
+---
+title: "Week06_regex_excercise.ipynb"
+output: html_document
+---
+
+# Regex exercise
+
+We use the following dataset from:
+https://www.kaggle.com/datasets/gpreda/reddit-vaccine-myths
+
+```{python}
+import pandas as pd
+import re
+```
+
+```{python}
+df_myth = pd.read_csv("https://www.dropbox.com/scl/fi/oooz8vktzyimlr0b0mkcn/reddit_vm_sub.csv?rlkey=for1fq6uxuw6h5qttrrvxu8gm&dl=1")
+```
+
+Answer following questions using regex:
+
+1. How many comments include a word autisum?
+
+```{python}
+pattern = r'autism'
+count = sum(1 for comment in df_myth['body'] if re.search(pattern, comment, flags=re.IGNORECASE))
+count
+```
+
+```{python}
+df_myth['body'].str.contains(r'autism',case=False).sum()
+```
+
+
+2. How many comments include a word mercury?
+
+```{python}
+pattern = r'mercury'
+count = sum(1 for comment in df_myth['body'] if re.search(pattern, comment, flags=re.IGNORECASE))
+count
+```
+
+
+
+3. How many comments use both autism and mercury? Using single regex to answer
+
+```{python}
+df_myth['body'].str.contains(r'autism.+mercury|mercury.+autism',case=False).sum()
+```
+4. How many comments include URL?
+```{python}
+df_myth['body'].str.contains(r'http',case=False).sum()
+```
+5. What are common domains for the link?
+```{python}
+df_myth['body'].str.extract(r'https?://([^/]+)').value_counts()
+
+```
+
+6. Extract links to NIH. find what are they.
+
+

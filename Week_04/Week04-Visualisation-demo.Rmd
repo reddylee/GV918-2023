@@ -3,15 +3,19 @@ title: "Week04-Visualisation-demo.ipynb"
 output: html_document
 ---
 
+```{r}
+library(reticulate)
+py_config()
+use_python("~/python/bin/python",required = T)
+```
+
 ```{python}
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
-```{bash}
-#pip3 install seaborn
-```
+
 
 
 ```{python}
