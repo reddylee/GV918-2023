@@ -1,0 +1,150 @@
+---
+title: "Week07_Working_with_the_Guardian_RSS.ipynb"
+output: html_document
+---
+
+## Get the data from the Guardian API
+
+- A simple explation of RSS is available here: https://www.theguardian.com/help/feeds
+- Let's try politics RSS: https://www.theguardian.com/politics/rss
+
+```{python}
+import pandas as pd
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+from lxml import etree
+```
+
+```{python}
+url = 'https://www.theguardian.com/politics/rss'
+response = urlopen(url)
+```
+
+## Method 1: Using BeautifulSoup
+
+You can use BeautifulSoup for xml parsing, and can use the same method as you did for web-scraping
+
+```{python}
+bs = BeautifulSoup(response, 'xml')
+```
+
+```{python}
+items = bs.select("item")
+```
+
+```{python}
+## check the length
+len(items)
+```
+
+```{python}
+## Printout xml
+print(items[0].prettify())
+```
+
+```{python}
+## Printout xml (prettified), maybe not necessary
+print(items[0].prettify())
+[item.title.get_text() for item in items]
+items[0].title.string
+title[:5]
+```
+
+### Extract contents
+
+```{python}
+items[0].title
+items[0].title.string
+```
+
+```{python}
+title = [item.title.get_text() for item in items]
+```
+
+```{python}
+title[:5]
+```
+
+```{python}
+description = [item.description.get_text() for item in items]
+```
+
+```{python}
+pubDate = [item.pubDate.get_text() for item in items]
+```
+
+```{python}
+link = [item.link.get_text() for item in items]
+```
+
+```{python}
+df = pd.DataFrame({"title": title, "description": description, "pubDate": pubDate, "link": link})
+```
+
+```{python}
+df.head()
+```
+
+#### Save the data
+
+```{python}
+## remove html tags
+df['description'] = df['description'].str.replace(r"<.+?>", "")
+```
+
+```{python}
+df.to_csv("df_guard_politics.csv")
+```
+
+## Method 2: Use xml parser
+
+```{python}
+url = 'https://www.theguardian.com/politics/rss'
+response = urlopen(url)
+tree = etree.parse(response)
+```
+
+```{python}
+## Using xpath to select item elements in channel
+items = tree.findall('./channel/item')
+```
+
+```{python}
+len(items)
+```
+
+```{python}
+print(etree.tostring(items[0], pretty_print = True, encoding = str))
+```
+
+```{python}
+## For an item you can get the text of title like this
+items[0].find("./title").text
+```
+
+```{python}
+title = [item.find("./title").text for item in items]
+```
+
+```{python}
+title[:5]
+```
+
+```{python}
+description = [item.find("./description").text for item in items]
+```
+
+```{python}
+pubDate = [item.find("./pubDate").text for item in items]
+```
+
+```{python}
+link = [item.find("./link").text for item in items]
+```
+
+```{python}
+df = pd.DataFrame({"title": title, "description": description, "pubDate": pubDate, "link": link})
+
+df.head()
+```
+

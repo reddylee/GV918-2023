@@ -1,0 +1,165 @@
+---
+title: "Week08-Demo1.ipynb"
+output: html_document
+---
+
+# Week08: Demo 1
+
+## Database
+
+- In this example, we use JHU data on covid cases/death in US Counties
+- The database contains only a data in September 2020
+- Only one table in the database
+- The database is not normalized
+
+```{python}
+!wget https://www.dropbox.com/s/5q8zdjudjdk63m6/covid_simple.sqlite?dl=1 -O covid_simple.sqlite
+```
+
+## Import packages
+
+```{python}
+import pandas as pd
+import sqlite3
+```
+
+## Create a connection object
+
+```{r}
+spark_read_source(sc,"covid_simple.sqlite")
+```
+
+
+```{python}
+con_cov = sqlite3.connect('covid_simple.sqlite')
+```
+
+## Run the first query
+
+```{python}
+df_covid = pd.read_sql_query('SELECT * FROM covid LIMIT 5', con_cov)
+df_covid
+```
+
+```{python}
+pd.read_sql_query('SELECT COUNT(*) FROM covid', con_cov)
+```
+
+## Select columns
+
+```{python}
+pd.read_sql_query("SELECT fips, county, date, cases FROM covid", con_cov)
+```
+
+## Subset the rows
+
+### Select California 
+
+```{python}
+pd.read_sql_query("SELECT * FROM covid WHERE state = 'California'", con_cov)
+```
+
+### Select the data on 1 September
+
+```{python}
+pd.read_sql_query("SELECT * FROM covid WHERE date = '2020-09-01'", con_cov)
+```
+
+- Select 1 Sep, 2020 in California
+
+```{python}
+pd.read_sql_query("SELECT * FROM covid WHERE date = '2020-09-01' AND state = 'California'", con_cov)
+```
+
+- Select a county with more than 100 deatch on 1 Sep, 2020
+
+```{python}
+pd.read_sql_query("SELECT * FROM covid WHERE date = '2020-09-01' AND deaths >= 100", con_cov)
+```
+
+### Using `LIKE`
+
+- Counties ending with "lake" 
+
+```{python}
+pd.read_sql_query("SELECT * FROM covid WHERE date = '2020-09-01' AND county LIKE '%lake'", con_cov)
+```
+
+- Counties with "lake" somewhere in the name
+
+```{python}
+pd.read_sql_query("SELECT * FROM covid WHERE date = '2020-09-01' AND county LIKE '%lake%'", con_cov)
+```
+
+### Using `IN`
+
+`IN` works like python's `in`.
+
+```{python}
+pd.read_sql_query("SELECT * FROM covid WHERE state IN ('Michigan', 'Alabama')", con_cov)
+```
+
+### Using `BETWEEN`
+
+```{python}
+pd.read_sql_query("SELECT * FROM covid WHERE date = '2020-09-01' AND cases BETWEEN 1000 AND 10000", con_cov)
+```
+
+### Using `DISTINCT`
+
+- How many states in the data? 
+
+```{python}
+pd.read_sql_query("SELECT DISTINCT state_code, state FROM covid WHERE state_code != 'None'", con_cov)
+```
+
+### Using `ORDER`
+
+- Select the data on 1 September, ordered by cases
+
+```{python}
+pd.read_sql_query("SELECT * FROM covid WHERE date ='2020-09-01' ORDER BY cases DESC", con_cov)
+```
+
+## Conduct aggregation
+
+### `COUNT`: Count the number of rows on 1 Sep
+
+- Simple query (but not perfect)
+
+```{python}
+pd.read_sql_query("SELECT COUNT(fips) FROM covid WHERE date ='2020-09-01'", con_cov)
+```
+
+- A better query
+
+```{python}
+pd.read_sql_query("SELECT COUNT(fips) FROM covid WHERE date ='2020-09-01' AND state_code != 'None'", con_cov)
+```
+
+### `SUM`
+
+- Number of total deaths on 1 Sep
+
+```{python}
+pd.read_sql_query("SELECT SUM(deaths) FROM covid WHERE date ='2020-09-01'", con_cov)
+```
+
+### Combining with `GROUP BY`
+
+- Number of total deaths, grouped by date
+
+```{python}
+pd.read_sql_query("SELECT date, SUM(deaths) AS tot_deaths FROM covid GROUP BY date", con_cov)
+```
+
+- Number of cases by the end of September by states
+
+```{python}
+pd.read_sql_query("SELECT state_code, state, SUM(deaths) AS tot_deaths, SUM(cases) AS tot_cases FROM covid WHERE date = '2020-09-30' GROUP BY state_code", con_cov)
+```
+
+```{python}
+pd.read_sql_query("SELECT state_code, state, SUM(deaths) AS tot_deaths, SUM(cases) AS tot_cases FROM covid WHERE date = '2020-09-30' GROUP BY state_code ORDER BY tot_cases DESC", con_cov)
+```
+

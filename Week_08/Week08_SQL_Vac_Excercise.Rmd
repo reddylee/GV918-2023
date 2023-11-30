@@ -1,0 +1,66 @@
+---
+title: "Week08_SQL_Vac_Excercise.ipynb"
+output: html_document
+---
+
+## Description
+
+In this exercise, you will practice reading CSV data, converting it to an SQL database, and then running queries using that database.
+
+The data we will use are tweets about COVID-19 vaccines. The data was obtained from here.
+
+https://www.kaggle.com/datasets/gpreda/all-covid19-vaccines-tweets
+
+## Load packages
+
+```{python}
+import pandas as pd
+import sqlite3
+```
+
+## Create a database
+
+1. Download a zip file
+2. Decompress
+3. Read
+4. Put in a SQLite database
+
+```{python}
+!wget https://www.dropbox.com/scl/fi/5h8i13oaxgod1l61s13y5/vaccination_all_tweets.zip?rlkey=jzgucf7esxl3of3ugnojb9n25&dl=1
+!mv /content/vaccination_all_tweets.zip?rlkey=jzgucf7esxl3of3ugnojb9n25 /content/vaccination_all_tweets.zip
+!unzip vaccination_all_tweets.zip
+```
+
+### Read file and check
+
+- Read the csv file and check the contents
+
+## Craete a SQLite database called `vaccine.sqlite` and create a table
+
+#### Create connection
+
+#### Copy the df as a table called `vaccine_tweets`
+
+## Run the following queries
+
+- Check the number of records
+- Get the five tweets from the table
+- Find the max and min date
+- Find the number of unique users in the table
+- Find the 10 most frequent posters of the tweets
+  - For top ten users, can we still check who they are?
+
+### A bit of more advanced queries
+
+- Check the number of users with more than one tweet? (google: SQL HAVING)
+- What is the average number of followers?
+- Who has the highest number of followers?
+- Check the number of tweets by months
+- How many tweets have the following texts?
+  - A word, Moderna, included
+  - A word, AstraZeneca, included
+  - A word, SinoVac, included
+  - Some vaccine conspiracy words included (e.g. 5G, Autism etc)
+- Conspiracy tweets are associated with specific vaccines?
+  
+

@@ -1,0 +1,54 @@
+```{python}
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+from urllib.parse import urljoin
+```
+
+```{python}
+url = "https://so.gushiwen.cn/gushi/shijing.aspx"
+```
+
+
+```{python}
+html_text = requests.get(url).text
+soup = BeautifulSoup(html_text,'lxml')
+
+# print(soup.prettify())
+```
+
+## Way 1
+```{python}
+data = []
+for div in soup.find_all('div',class_='typecont'):
+  title = [t.text.strip() for t in div.find_all('strong')]
+  subtitles = [s.text.strip() for s in div.find_all('span') if '今佚' not in s.text.strip()]
+  links = [urljoin(url, a['href']) for a in div.find_all('a') if '今佚' not in a.text.strip()]
+  for subtitle, link in zip(subtitles, links):
+    data.append({'title': title, 'subtitle': subtitle, 'link': link})
+
+df = pd.DataFrame(data)
+
+```
+
+## Way 2.
+```{python}
+divs = soup.find_all('div', class_='typecont')
+
+data = []
+for div in divs:
+    # Extract title, subtitle, and links
+    title = div.find('strong').text.strip()
+    spans = div.find_all('span') 
+    
+    for span in spans:
+        if '今佚' in span.text:  # Skip the span if it contains the word "text"
+            continue
+        subtitle = span.text.strip()
+        link = urljoin(url,span.a['href'])
+    
+        data.append({'Title': title, 'Subtitle': subtitle, 'Link': link})
+
+# Create a DataFrame
+DF = pd.DataFrame(data)
+```

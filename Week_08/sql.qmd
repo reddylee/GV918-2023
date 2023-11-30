@@ -1,0 +1,44 @@
+---
+title: Data Science in Spark with sparklyr
+format: html
+---
+```{r}
+#| label: setup
+
+library(sparklyr)
+library(tidyverse)
+sc <- spark_connect(master = "local")
+```
+
+
+
+```{r}
+spark_read_csv(sc,"wvs","WVS.csv")
+#copy_to(spark_sql,wvs)
+copy_to(sc,mtcars)
+```
+
+
+```{sql connection=sc}
+select * from wvs
+where nation = "USA"
+```
+```{sql connection=sc}
+select * from mtcars
+```
+```{sql connection=sc}
+select distinct nation from wvs
+order by nation desc
+```
+```{r}
+distinct(mtcars,cyl)
+```
+
+```{sql connection=sc}
+select max(age) as age_max
+from wvs
+
+```
+
+
+

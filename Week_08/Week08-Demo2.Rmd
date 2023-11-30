@@ -1,0 +1,83 @@
+---
+title: An R Markdown document converted from "Week08-Demo2.ipynb"
+output: html_document
+---
+
+# Week08: Demo 2
+
+## Database
+
+- In this example, we use JHU data on covid cases/death in US Counties
+- The database contains only a data in September 2020
+- Database is normalized
+  - tables for county and state
+- Also, other tables exist
+  - `demography` 
+  - `election_2016`
+
+```{python}
+!wget https://www.dropbox.com/s/wkhjoah228gmhtl/covid.sqlite?dl=1 -O covid.sqlite
+```
+
+## Import packages
+
+```{python}
+import pandas as pd
+import sqlite3
+```
+
+## Create a connection object
+
+```{python}
+con_cov = sqlite3.connect('covid.sqlite')
+```
+
+## Check tables
+
+- In sqlite databases, there is a special table called `sqlite_master`. This table contains the information about tables.
+
+```{python}
+df_tab_info = pd.read_sql_query("SELECT * FROM sqlite_master WHERE type='table'", con_cov)
+df_tab_info
+```
+
+- To check the definitions of fields in thetable, we can use `sql` field in the dataframe
+
+```{python}
+df_tab_info['sql'][0]
+```
+
+- Now let's run a simple query on `covid` table 
+
+```{python}
+pd.read_sql_query("SELECT * FROM covid LIMIT 5", con_cov)
+```
+
+- What about other tables?
+
+```{python}
+pd.read_sql_query("SELECT * FROM county LIMIT 5", con_cov)
+```
+
+```{python}
+pd.read_sql_query("SELECT * FROM state LIMIT 5", con_cov)
+```
+
+### Using `JOIN`
+
+- Combine covid and county
+
+```{python}
+pd.read_sql_query("SELECT covid.*, county.county, county.state_code FROM covid INNER JOIN county ON covid.fips = county.fips", con_cov)
+```
+
+```{python}
+pd.read_sql_query("SELECT a.*, b.county, b.state_code FROM covid AS a INNER JOIN county AS b ON a.fips = b.fips", con_cov)
+```
+
+- Combine covid, county, and state
+
+```{python}
+pd.read_sql_query("SELECT a.*, b.county, b.state_code, c.state FROM covid AS a INNER JOIN county AS b ON a.fips = b.fips INNER JOIN state as c ON b.state_code = c.state_code", con_cov)
+```
+

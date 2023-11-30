@@ -1,0 +1,165 @@
+---
+title: "Week_07/Week07-API-Exercise-MPs.ipynb"
+output: html_document
+---
+
+```{python}
+import pandas as pd
+from urllib.request import urlopen
+import json
+from time import sleep
+```
+
+# Parliament members
+
+The following is the names and ids of MPs. Using ids, we will extract more information through parliament members API.
+
+```{python}
+!wget https://www.dropbox.com/s/n038gl81vpanv4e/df_all_mps_sub.csv
+```
+
+```{python}
+df_mps = pd.read_csv("df_all_mps_sub.csv")
+df_mps["id"][0]
+
+```
+
+## Get members
+
+The API we are going to access is this:
+
+* Documentation: https://members-api.parliament.uk/index.html
+
+* Endpoint: https://members-api.parliament.uk/api/Members/{id}
+
+### Kier Stermer
+
+Now let's try to access Kier Stermer's information. The following line will provide his id:
+
+```{python}
+df_mps[df_mps['name'].str.contains("Starmer")]
+```
+
+#### Create URL
+
+We need to construct an url to access. The following code is an example of that using `.format()` method. For this example, it's not necessary as simple concaetnation is sufficient, but for more complicated cases, this will help.
+
+
+```{python}
+
+url_template = 'https://members-api.parliament.uk/api/Members/{id}'
+url_template.format(id = "4514")
+```
+
+Now, let's access the page with `urlopen()` and hand the response to `json.load()`
+
+```{python}
+current_ids = df_mps["id"]
+current_id = 4514
+res = urlopen(url_template.format(id = current_id))
+member_json = json.load(res)
+```
+
+Once you load json, you can print out it with `json.dumps()`
+
+```{python}
+print(json.dumps(member_json, indent=4))
+```
+
+Let's extract
+- gender
+- party
+- electoral constituency
+- membership start date
+
+For example first elected canbe ectracted like this:
+
+```{python}
+member_json.get("value").get('latestHouseMembership').get('membershipStartDate')
+```
+
+Let's extract all 4 fields, convert them (with id) to a dataframe, called `df_info`
+
+The results looks like this:
+
+|id |membershipStartDate|gender             |party|membershipFrom|
+|---|-------------------|-------------------|-----|--------------|
+|4514|2015-05-07T00:00:00|M                  |Labour|Holborn and St Pancras|
+
+```{python}
+data_list = []
+current_ids = df_mps["id"][:5]
+for current_id in current_ids:
+  url_template = 'https://members-api.parliament.uk/api/Members/{id}'
+  res = urlopen(url_template.format(id = current_id))
+  member_json = json.load(res)
+  sid = member_json.get("value").get("id")
+  membershipStartDate = member_json.get("value").get("latestHouseMembership").get("membershipStartDate")
+  party = member_json.get("value").get("latestParty").get("name")
+  membershipFrom = member_json.get("value").get("latestHouseMembership").get("membershipFrom")
+  data_list.append({"id": sid, "membershipStartDate": membershipStartDate, "party": party, "membershipFrom": membershipFrom})
+  
+
+Newdf = pd.DataFrame(data_list)
+Newdf.head
+```
+
+
+#### Accessing contact information
+
+There is another Members API, which is about the contact information. 
+
+* Endpoint: https://members-api.parliament.uk/api/Members/{id}/Contact
+
+Let's accces it, and extract some more information
+
+
+```{python}
+url_template_contact = 'https://members-api.parliament.uk/api/Members/{id}/Contact'
+url_template_contact.format(id = "4514")
+```
+
+Access the endpoint and extract some information
+
+Dump the json 
+
+Get website address and twitter as an dictionary. The resulting outcome is like this:
+
+```
+{'Website': 'http://www.keirstarmer.com/',
+ 'Twitter': 'https://twitter.com/keir_starmer'}
+```
+
+Convert the dictionary into a dataframe
+
+Concatenate with `df_info`
+
+The resulting dataframe should look like this:
+
+|id  |membershipStartDate|gender|party |membershipFrom        |Website                    |Twitter                         |
+|----|-------------------|------|------|----------------------|---------------------------|--------------------------------|
+|4514|2015-05-07T00:00:00|M     |Labour|Holborn and St Pancras|http://www.keirstarmer.com/|https://twitter.com/keir_starmer|
+
+## Combine the previous work as a function
+
+```{python}
+def get_member_info(id, sleep_sec = 3):
+  df_member_info = pd.DataFrame()
+  sleep(sleep_sec)
+  return(df_member_info)
+```
+
+Check if the function works
+
+```{python}
+get_member_info('4212')
+```
+
+#### loop over first 20 members and cocatenate. Check if all works
+
+```{python}
+list_df = [get_member_info(cid) for cid in df_mps[:20]['id']]
+df_20_members = pd.concat(list_df, axis = 0)
+df_20_members
+```
+

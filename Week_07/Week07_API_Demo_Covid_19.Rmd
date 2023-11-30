@@ -1,0 +1,209 @@
+---
+title: "Week_07/Week07_API_Demo_Covid_19.ipynb"
+output: html_document
+---
+
+# Public Health England, Covid-19 API
+
+We are going to work with API of Covid-19 in the UK provided by Public Health England. The API has a python wrapper, so we do not have to code by ourselves, but to get used to the process of accessing API, we first access to the API without the wrapper, and then use the package afterwords.
+
+API documentation: https://coronavirus.data.gov.uk/details/developers-guide
+
+API endpoint: https://api.coronavirus.data.gov.uk/v1/data
+
+uk-covid-19 package documentation: https://pypi.org/project/uk-covid19/
+
+## Load packages
+
+
+
+
+```{python}
+from urllib.request import urlopen
+import json
+import gzip
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+
+## Load example URL
+
+```{python}
+example_url = "https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=nation;areaName=england&structure={%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByPublishDate%22:%22newDeaths28DaysByPublishDate%22,%22cumDeaths28DaysByPublishDate%22:%22cumDeaths28DaysByPublishDate%22}"
+```
+
+```{python}
+response = urlopen(example_url)
+js = json.loads(response)
+```
+
+```{python}
+response = urlopen(example_url)
+content_gz = response.read() # read the response (in tar.gz format)
+content_text = gzip.decompress(content_gz) # decompress
+dic_nat = json.loads(content_text.decode('utf-8'))
+```
+
+```{python}
+dic_nat['length']
+```
+
+```{python}
+dic_nat['data'][0]
+```
+
+```{python}
+date = [item['date'] for item in dic_nat['data']]
+```
+
+```{python}
+newCasesByPublishDate = [item['newCasesByPublishDate'] for item in dic_nat['data']]
+```
+
+```{python}
+print(json.dumps(dic_nat, indent=4))
+```
+
+```{python}
+dic_nat['data'][0]
+```
+
+```{python}
+pd.DataFrame(dic_nat['data'][0], index=[0])
+```
+
+```{python}
+list_df = [pd.DataFrame(item, index=[0]) for item in dic_nat['data']]
+list_df[-5:]
+```
+
+```{python}
+list_df = [pd.DataFrame(item, index=[0]) for item in dic_nat['data']]
+df_england  = pd.concat(list_df, ignore_index=True)
+df_england.head(20)
+```
+
+```{python}
+date = [item['date'] for item in ]
+```
+
+## Make functions to get the data
+
+### Function to construct the filter string
+
+- we will create a function to create a string like `areaType=nation;areaName=england`, from a dictionary `{'areaType':'nation', 'areaName': 'england'}`
+
+```{python}
+def construct_filter(filters):
+  key_val_list = [key + "=" + value for key, value in filters.items()]
+  return(str.join(';', key_val_list))
+```
+
+```{python}
+construct_filter({'areaType':'nation', 'areaName': 'england'})
+```
+
+### Function to construct the URL
+
+```{python}
+def construct_url(filters):
+  filter_str = construct_filter(filters)
+  # url_template = "https://api.coronavirus.data.gov.uk/v1/data?filters={filterVal}&structure={%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByPublishDate%22:%22newDeaths28DaysByPublishDate%22,%22cumDeaths28DaysByPublishDate%22:%22cumDeaths28DaysByPublishDate%22}"
+  # full_url = url_template.format(filterVal = filters)
+  full_url = "https://api.coronavirus.data.gov.uk/v1/data?filters=" + filter_str + "&structure={%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByPublishDate%22:%22newDeaths28DaysByPublishDate%22,%22cumDeaths28DaysByPublishDate%22:%22cumDeaths28DaysByPublishDate%22}"
+  return(full_url)
+```
+
+```{python}
+current_url = construct_url({'areaType':'nation',
+                            'areaName': 'england'})
+current_url
+```
+
+### Using the URL function, get the data again
+
+```{python}
+response = urlopen(current_url)
+content_gz = response.read()
+content_text = gzip.decompress(content_gz)
+dic_nat = json.loads(content_text.decode('utf-8'))
+dic_nat['data'][0:3]
+```
+
+### Function to get the data
+
+```{python}
+def get_data(filters):
+  c_url = construct_url(filters)
+  response = urlopen(c_url)
+  content_gz = response.read()
+  content_text = gzip.decompress(content_gz)
+  dic_nat = json.loads(content_text.decode('utf-8'))
+  list_df = [pd.DataFrame(item, index=[0]) for item in dic_nat['data']]
+  df_out  = pd.concat(list_df, ignore_index=True)
+  return(df_out)
+```
+
+```{python}
+df_new = get_data({'areaType':'nation','areaName': 'england'})
+df_new.head()
+```
+
+```{python}
+#df_colchester = get_data({'areaType':'ltla', 'areaName':'colchester'})
+#get_data({'areaType':'ltla', 'date':'2021-11-01'})
+df_colchester2 = get_data({'areaType':'ltla', 'areaCode':'E07000071'})
+
+```
+
+```{python}
+df_colchester2.head()
+```
+
+```{python}
+#sns.lineplot(data = df_national, x = "date", y = "newCasesByPublishDate" )
+import seaborn as sns
+df_colchester2.date
+df_colchester2['date2'] = pd.to_datetime(df_colchester2.date)
+sns.lineplot(data = df_colchester2, x = "date2", y = "newCasesByPublishDate" )
+plt.show()
+```
+
+## Use the package
+
+```{python}
+!pip install uk-covid19
+```
+
+```{python}
+from uk_covid19 import Cov19API
+```
+
+```{python}
+c_structure = {
+    "date": "date",
+    "areaName": "areaName",
+    "areaCode": "areaCode",
+    "newCasesByPublishDate": "newCasesByPublishDate",
+    "cumCasesByPublishDate": "cumCasesByPublishDate",
+    "newDeaths28DaysByDeathDate": "newDeaths28DaysByDeathDate",
+    "cumDeaths28DaysByDeathDate": "cumDeaths28DaysByDeathDate"
+}
+```
+
+```{python}
+c_filters = ['areaType=ltla',
+             'date=2020-11-01']
+```
+
+```{python}
+api = Cov19API(filters=c_filters, structure=c_structure)
+df_covid_2 = api.get_dataframe()
+```
+
+```{python}
+df_covid_2
+```
+
+
+

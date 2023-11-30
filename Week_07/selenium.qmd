@@ -1,0 +1,8 @@
+```{python}
+import selenium
+```
+
+Chrome is up to date
+Version 119.0.6045.159 (Official Build) (x86_64)
+
+ChromeDriver 119.0.6045.105 (38c72552c5e15ba9b3117c0967a0fd105072d7c6-refs/branch-heads/6045@{#1103})

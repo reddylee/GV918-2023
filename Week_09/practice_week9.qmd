@@ -1,0 +1,72 @@
+```{r}
+rmarkdown::convert_ipynb("Week09_MongoDB_demo.ipynb")
+```
+
+```{r}
+library(RSQLite)
+library(tidyverse)
+library(jsonlite)
+library(DBI)
+
+conn <- dbConnect(SQLite(),dbname = "covid.sqlite")
+dbListTables(conn) # list tables
+dbListFields(conn,"covid") # find variable names of the table
+json_data <- fromJSON("asset-manifest.json")
+json <- as.data.frame(json_data)
+dbWriteTable(conn, "json",json)
+```
+```{sql connection=conn}
+select * from sqlite_master
+where type = 'table'
+```
+
+```{sql connection=conn}
+select * from covid
+limit 5
+```
+```{sql connection=conn}
+select * from county
+limit 5
+```
+```{sql connection=conn}
+select * from covid
+join county
+on covid.fips = county.fips
+```
+```{sql connection=conn}
+select * from covid
+inner join county
+on covid.fips = county.fips
+```
+```{sql connection=conn}
+SELECT COUNT(*) AS TotalRows
+FROM covid
+Inner JOIN county ON covid.fips = county.fips;
+```
+```{sql connection=conn}
+Select *
+From covid As a
+join county as b on a.fips = b.fips
+join state as c on b.state_code = c.state_code
+limit 7
+```
+```{sql connection=conn}
+Select a.*, b.county, b.state_code, c.state
+From covid As a
+join county as b on a.fips = b.fips
+join state as c on b.state_code = c.state_code
+```
+
+```{sql connection=conn}
+Select count(*)
+From covid As a
+join county as b 
+on a.fips = b.fips
+join state as c 
+on b.state_code = c.state_code
+```
+
+```{sql connection=conn}
+select * from json
+```
+
