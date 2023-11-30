@@ -8,7 +8,7 @@ library(tidyverse)
 library(jsonlite)
 library(DBI)
 
-conn <- dbConnect(SQLite(),dbname = "covid.sqlite")
+conn <- dbConnect(SQLite(),dbname = "petition.sqlite")
 dbListTables(conn) # list tables
 dbListFields(conn,"covid") # find variable names of the table
 json_data <- fromJSON("asset-manifest.json")
@@ -68,5 +68,8 @@ on b.state_code = c.state_code
 
 ```{sql connection=conn}
 select * from json
+```
+```{r}
+rmarkdown::convert_ipynb("Week09-SQLite-Exercise.ipynb")
 ```
 

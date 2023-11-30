@@ -1,0 +1,190 @@
+---
+title: "Week09_MongoDB_demo (1).ipynb"
+output: html_document
+---
+
+# Week09: MongoDB
+
+## Overview
+
+In this demo, we create a new database on a cloud MongoDB, and populate it with some data.
+
+https://cloud.mongodb.com/
+
+
+
+## Create new organization
+
+1. Login MongoDB
+2. Go to View all organization (from the list of organization at the top left)
+3. Click "Create new organization"
+4. Fill the form (e.g. new organization name), and create new organization
+5. Select the organization
+
+
+
+
+## Create a new project
+
+In organization top menu:
+
+1. Select projects
+2. Select New project, fill the name, create
+
+
+## Create new database
+
+In the project page:
+1. "Build a Database"
+2. Select "M0" (which is free)
+3. Click "Create Cluster"
+4. Fill username and password, click "Create user"
+5. Select IP address
+6. Create (then wait for provision)
+
+
+## Create collection
+
+1. In the database page, click "Browse Collections"
+2. Select "Create new collection" (or "Add My Own Data")
+2. Fill database name and collection name (e.g. "gv918-2023" and "test")
+
+## Connect to the database
+
+1. Now, going back to the cluster top page
+2. Click "Connect"
+3. Slect "Connect your application"
+4. Select Python and 3.6 or later, tick "View Full Code Sample"
+5. Copy and paste the line of `uri = ...`, replace `<password>` with actual password
+
+## Whitelist the IP of Colab
+
+1. Connect colab, run the following
+
+```{python}
+!curl ipecho.net/plain
+```
+
+2. Go back to MongoDB page
+3. Select Network Access on the right
+4. Add IP address from the 1.
+
+## Import packages
+
+```{python}
+!pip install pymongo
+```
+
+```{python}
+import pymongo
+from pymongo.mongo_client import MongoClient
+import pandas as pd
+```
+
+## Connect to the database
+
+```{python}
+uri = "mongodb+srv://reddylee:<A2DLI83b3R3qAuNu>@reddy.d9kixzd.mongodb.net/?retryWrites=true&w=majority"
+```
+
+```{python}
+cluster = MongoClient(uri)
+```
+
+```{python}
+db = cluster['sample_training']
+collection = db['posts']
+```
+
+```{python}
+cluster.server_info()
+```
+
+## Populate the database
+
+Now, we can populate the database. We first put a very simple data. Any Python dictionary can be placed in the database:
+
+```{python}
+collection.insert_one({"FirstName": "Harry", "FamilyName": "Kane"})
+```
+
+Let's check the record on the web
+
+### More data
+
+```{python}
+!wget https://www.dropbox.com/s/yl8p0598gm8ek6c/df_all_mps_wk09.csv?dl=0 -O df_all_mps_wk09.csv
+```
+
+### Insert many records
+
+1. Read csv data
+2. Convert the data to a list of dictionaries
+3. Create new collection
+4. Put the data into the new collection
+
+```{python}
+df_mps = pd.read_csv("df_all_mps_wk09.csv")
+df_mps.head()
+```
+
+```{python}
+df_mps.rename({"id": '_id'}, axis = "columns", inplace = True)
+```
+
+```{python}
+dict_mps = df_mps.to_dict(orient = "records")
+```
+
+```{python}
+dict_mps[:3]
+```
+
+```{python}
+db.create_collection("mps")
+```
+
+```{python}
+coll_mps = db["mps"]
+```
+
+```{python}
+coll_mps.insert_many(dict_mps)
+```
+
+### Run mongo queries
+
+https://www.mongodb.com/docs/manual/tutorial/query-documents/
+
+- Select records of Female MPs
+
+```{python}
+list(coll_mps.find({"gender": "F"}).limit(10))
+```
+
+- count the number of female mps
+
+```{python}
+coll_mps.count_documents({"gender": "F"})
+```
+
+```{python}
+coll_mps.count_documents({"gender": "M"})
+```
+
+- Find MPs whose name contains "David"
+
+```{python}
+coll_mps.count_documents({"name": {"$regex": "David"}})
+```
+
+- find MPs whose ID number is smaller than 100
+
+```{python}
+coll_mps.count_documents({"_id": {"$lt": 100}})
+```
+
+```{python}
+list(coll_mps.find({"_id": {"$lt": 100}}))
+```
+

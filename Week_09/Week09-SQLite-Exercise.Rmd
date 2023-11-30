@@ -1,0 +1,101 @@
+---
+title: "Week09-SQLite-Exercise.ipynb"
+output: html_document
+---
+
+```{r}
+library(RSQLite)
+library(tidyverse)
+library(jsonlite)
+library(DBI)
+```
+## Description
+
+In this exersise, you will use the UK Parliment petition data stored in a SQLite database. The database contains the information on the number of signatuures for a number of most popular petitions as of 30 Nov, 2023.
+
+
+## Download the dbfile
+
+```{python}
+#!wget "https://www.dropbox.com/scl/fi/3tv2vrnc1wxqm85gkubor/petition.sqlite?rlkey=drfhmgur1n3w7c891c3ujdeqp&dl=1" -O petition.sqlite
+```
+
+## Connect to the database
+
+```{r}
+conn <- dbConnect(SQLite(),dbname = "petition.sqlite")
+```
+
+
+## Check the database contents
+
+Look up the `sqlite_master` table and figure out how many tables exist in this database. Also, get the understanding of the each table by browsing it.
+
+```{r}
+dbListTables(conn) # list tables
+
+dbListFields(conn,"constituency") # find variable names of the table
+dbListFields(conn,"signature") # find variable names of the table
+dbListFields(conn,"petitionInfo") # find variable names of the table
+```
+
+```{sql connection=conn}
+select * from sqlite_master
+where type = 'table'
+```
+
+## Answer the following questions using SQL queries and pandas dataFrames generated from SQL queries.
+
+1. How many different petitions in this database?
+
+```{sql connection=conn}
+select count(*)
+from petitionInfo
+```
+
+2. What is the petition with the largest number of signatures? What the petition is about?
+```{sql connection=conn}
+select * from signature
+order by signature_count desc
+limit 5
+```
+```{sql connection=conn}
+select * from petitionInfo
+order by signature_count desc
+limit 5
+```
+
+```{sql connection=conn}
+select action, signature_count from petitionInfo
+where signature_count = 607349
+```
+
+
+3. For the petition above (2.), which electoral constituency had the largest number of signatures? What's the number of signatures?
+
+```{sql connection=conn}
+select * from signature
+group by signature.ons_code
+order by signature.signature_count desc
+```
+
+4. Who is the MP of the constituency (3.)?
+```{sql connection=conn}
+select ons_code, mp from constituency
+where ons_code == "E14000720"
+```
+
+5. Find out how many peitions are about election by searching the `action` column in one of tables.
+```{sql connection=conn}
+select count(*) as no_election
+from petitionInfo
+where action like '%election' OR action LIKE '%elect%'
+```
+
+6. Find whether there are correlations between the parties representing electoral constituencies and the number of signatures for the petition(s) you find (5.)
+```{sql connection=conn}
+
+```
+
+
+
