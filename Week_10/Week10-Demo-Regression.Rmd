@@ -1,0 +1,339 @@
+---
+title: An R Markdown document converted from "Week10-Demo-Regression.ipynb"
+output: html_document
+---
+
+# Regression Demo
+
+In this demo we predict the average housing price in Boston. 
+
+- The data: "Housing data for 506 census tracts of Boston from the 1970 census."
+- Variables:
+  - **crim**: per capita crime rate by town
+  - **zn**: proportion of residential land zoned for lots over 25,000 sq.ft
+  - **indus**: proportion of non-retail business acres per town
+  - **chas**: Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)
+  - **nox**: nitric oxides concentration (parts per 10 million)
+  - **rm**: average number of rooms per dwelling
+  - **age**: proportion of owner-occupied units built prior to 1940
+  - **dis**: weighted distances to five Boston employment centres
+  - **rad**: index of accessibility to radial highways
+  - **tax**: full-value property-tax rate per USD 10,000
+  - **ptratio**: pupil-teacher ratio by town
+  - **b**: 1000(B - 0.63)^2 where B is the proportion of blacks by town
+  - **lstat**: percentage of lower status of the population
+  - **medv**: median value of owner-occupied homes in USD 1000's
+
+
+The outcome variable is **medv**
+
+## Import packages
+
+```{python}
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+```{bash}
+# pip3 install seaborn
+pip3 install scikit-learn
+```
+
+```{r}
+boston <- Boston
+```
+
+## Get Data
+
+```{python}
+!wget https://www.dropbox.com/s/isz2mvhqui1bw9c/boston.csv -O boston.csv
+```
+
+### Read and check the data
+
+```{python}
+df_boston = pd.read_csv("boston.csv")
+df_boston= r.boston
+```
+
+```{python}
+df_boston
+```
+
+```{python}
+df_boston.corr()
+```
+
+#### Some visualisation
+
+```{python}
+fig,axes = plt.subplots(nrows = 4, ncols=4, figsize = (12, 12))
+
+axes = axes.flatten()
+
+for i in range(0, 13):
+  axes[i].plot(df_boston.iloc[:,i],df_boston['medv'],'o', alpha = .5)
+  axes[i].set_title(df_boston.columns[i])
+
+plt.tight_layout()
+
+
+sns.pairplot(df_boston)
+```
+
+## Preparing the data for machine learning
+
+### Train-Test Split
+
+```{python}
+from sklearn.model_selection import train_test_split
+```
+
+```{python}
+X = df_boston.drop("medv", axis = 1)
+y = df_boston['medv']
+```
+
+```{python}
+X
+```
+
+```{python}
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=101)
+```
+
+```{python}
+X_test
+```
+
+### Standardizing the data
+
+This is not strictly necessary for OLS, but I will do it anyway. 
+
+Standardization is to rescale a variable so that it has mean zero and standard deviation of one.
+
+The process works like this:
+
+1. First create a standardization object
+2. Calculate the mean and sd of each numerical variable from the train set
+3. Convert the values of variables (in both train and test sets) using 2.
+
+```{python}
+from sklearn.preprocessing import StandardScaler
+```
+
+```{python}
+scaler = StandardScaler()
+```
+
+```{python}
+scaler.fit(X_train)
+```
+
+```{python}
+X_train_scaled = scaler.transform(X_train)
+```
+
+```{python}
+X_train_scaled
+```
+
+```{python}
+X_test_scaled = scaler.transform(X_test)
+```
+
+## Model estimation and evaluation
+
+```{python}
+from sklearn.linear_model import LinearRegression
+```
+
+### Train the model
+
+```{python}
+model_lm = LinearRegression()
+```
+
+```{python}
+model_lm.fit(X_train_scaled, y_train)
+```
+
+```{python}
+pred_train = model_lm.predict(X_train_scaled)
+```
+
+```{python}
+plt.plot(pred_train, y_train, 'o')
+plt.show()
+```
+
+## Model evaluations
+
+Now we evaluate the model with metrics:
+
+- MAE: mean absolute error
+- MSE: mean squared error
+- RMSE: root mean squared error
+
+Our primary interest is in the test set metrics, but we also use the training set metrics to check for overfitting, etc.
+
+
+```{python}
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+```
+
+```{python}
+pred_train = model_lm.predict(X_train_scaled)
+train_MAE = mean_absolute_error(y_train, pred_train)
+train_MSE = mean_squared_error(y_train, pred_train)
+train_RMSE = np.sqrt(mean_squared_error(y_train, pred_train))
+```
+
+```{python}
+pred_test = model_lm.predict(X_test_scaled)
+test_MAE = mean_absolute_error(y_test, pred_test)
+test_MSE = mean_squared_error(y_test, pred_test)
+test_RMSE = np.sqrt(mean_squared_error(y_test, pred_test))
+```
+
+```{python}
+[train_MAE, train_MSE, train_RMSE]
+```
+
+```{python}
+[test_MAE, test_MSE, test_RMSE]
+```
+
+```{python}
+df_boston.describe()
+```
+
+## Analyzing Errors
+
+
+```{python}
+test_error = y_test - pred_test
+```
+
+```{python}
+sns.histplot(test_error, kde = True)
+plt.show()
+```
+
+```{python}
+sns.scatterplot(x = df_boston['medv'], y = test_error)
+plt.axhline(y = 0, color = 'r', alpha = .5)
+plt.show()
+```
+
+# Polynomial Regression
+
+In this section, we try polynomial regression, where we include square terms and interaction terms of input variables.
+
+```{python}
+#| echo: true
+
+
+test =plt.plot([1,2,3,4])
+plt.show(test)
+```
+
+## Import module
+
+```{python}
+from sklearn.preprocessing import PolynomialFeatures
+```
+
+## Generate the polynomial data
+
+### Standardization
+
+## Fit the model
+
+## Model evaluations
+
+Caclulate the metrics. Is it any better than the regression without polynomials?
+
+## Analyzing errors
+
+Now, check the error distributions, and see how much improve it made
+
+## Try higher order polynomial
+
+Let's try polynomials with 3 or more degrees. What do we find?
+
+# Regularized regressions
+
+```{python}
+from sklearn.linear_model import RidgeCV
+```
+
+### Model fitting and evaluation
+
+```{python}
+model_ridge = RidgeCV(alphas=(0.1, 1.0, 10.0),scoring='neg_mean_absolute_error')
+```
+
+```{python}
+model_ridge.fit(X_train_poly_scaled,y_train)
+```
+
+```{python}
+model_ridge.alpha_
+```
+
+```{python}
+pred_test_ridge = model_ridge.predict(X_test_poly_scaled)
+```
+
+```{python}
+MAE = mean_absolute_error(y_test, pred_test_ridge)
+MSE = mean_squared_error(y_test, pred_test_ridge)
+RMSE = np.sqrt(mean_squared_error(y_test, pred_test_ridge))
+```
+
+```{python}
+[MAE, MSE, RMSE]
+```
+
+```{python}
+model_ridge.coef_
+```
+
+## LASSO 
+
+```{python}
+from sklearn.linear_model import LassoCV
+```
+
+### Model fitting and evaluation
+
+```{python}
+model_lasso = LassoCV(eps = 0.1, cv = 10)
+```
+
+```{python}
+model_lasso.fit(X_train_poly_scaled, y_train)
+```
+
+```{python}
+model_lasso.alpha_
+```
+
+```{python}
+model_lasso.coef_
+```
+
+```{python}
+pred_test_lasso = model_lasso.predict(X_test_poly_scaled)
+MAE = mean_absolute_error(y_test, pred_test_lasso)
+MSE = mean_squared_error(y_test, pred_test_lasso)
+RMSE = np.sqrt(mean_squared_error(y_test, pred_test_lasso))
+```
+
+```{python}
+[MAE, MSE, RMSE]
+```
+

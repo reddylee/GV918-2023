@@ -1,0 +1,47 @@
+```{r}
+library(tidyverse)
+library(MASS)
+rmarkdown::convert_ipynb("Week10-Demo-Regression.ipynb")
+```
+```{r}
+Boston %>% 
+  head()
+```
+
+```{python}
+import pandas as pd
+```
+
+```{r}
+library(reticulate)
+```
+
+
+```{python}
+#| echo: true
+
+plt.plot([1,2,3,4])
+plt.show()
+```
+```{python}
+df=pd.DataFrame([[1, 2], [3, 4], [4, 3], [2, 3]])
+fig = plt.figure(figsize=(14,8))
+for i in df.columns:
+    ax=plt.subplot(2,1,i+1) 
+    df[[i]].plot(ax=ax)
+    print(i)
+plt.show()
+```
+
+```{python}
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
